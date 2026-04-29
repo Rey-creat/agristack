@@ -117,6 +117,12 @@ img {
     gap: 5px;
 }
 
+.logo-image {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+}
+
 .logo-text {
     font-size: 22px;
     font-weight: 700;
@@ -777,6 +783,12 @@ img {
     font-weight: 700;
 }
 
+.footer-logo .logo-image {
+    height: 90px;
+    width: 110px;
+    object-fit: contain;
+}
+
 .footer-section p {
     font-size: 14px;
     color: #9ca3af;
@@ -829,6 +841,12 @@ img {
     gap: 15px;
     font-size: 24px;
     margin-bottom: 25px;
+}
+
+.payment-icon {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
 }
 
 .subscribe-title {

@@ -1,0 +1,54 @@
+/* ============================================================================
+   TRUSTED BRANDS
+   ============================================================================ */
+.trusted-brands {
+    padding: 40px 0;
+    background: var(--bg-white);
+}
+
+.trusted-brands h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.brand-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.brand-item img {
+    max-width: 80%;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.brand-item:hover img {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

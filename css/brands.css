@@ -3,7 +3,8 @@
    ============================================================================ */
 .trusted-brands {
     padding: 40px 0;
-    background: var(--bg-white);
+    background: var(--Backgrounds-Primary, #FFFFFF);
+    border-bottom: 1px solid #F3F4F6;
 }
 
 .trusted-brands h2 {
@@ -23,17 +24,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    background: var(--bg-light);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    padding: 0;
+    background: transparent;
+    border: none;
     transition: var(--transition);
 }
 
 .brand-item:hover {
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
+    transform: scale(1.05);
 }
 
 .brand-item img {

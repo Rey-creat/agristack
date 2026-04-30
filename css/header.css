@@ -2,14 +2,20 @@
    HEADER & NAVIGATION
    ============================================================================ */
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: var(--bg-white);
     border-bottom: 1px solid var(--border-color);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .top-banner {
     background: var(--primary-color);
     color: white;
-    padding: 10px 0;
+    padding: 8px 0;
     font-size: 13px;
 }
 
@@ -30,16 +36,17 @@
 }
 
 .navbar {
-    padding: 15px 0;
+    padding: 3px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
 .nav-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 30px;
+    gap: 5px;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    
 }
 
 .logo {
@@ -49,8 +56,8 @@
 }
 
 .logo-image {
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     object-fit: contain;
 }
 

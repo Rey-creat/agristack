@@ -117,17 +117,18 @@
 .btn-add-cart {
     width: 100%;
     padding: 12px;
-    background: var(--primary-color);
-    color: white;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
     font-weight: 600;
     transition: var(--transition);
-    border: none;
     cursor: pointer;
 }
 
 .btn-add-cart:hover {
-    background: var(--primary-dark);
+    background: var(--primary-color);
+    color: white;
     transform: scale(1.02);
 }
 

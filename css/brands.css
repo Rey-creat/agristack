@@ -1,8 +1,22 @@
 /* ============================================================================
    TRUSTED BRANDS
    ============================================================================ */
+
+/* Animation Keyframes */
+@keyframes slideRightThenLeft {
+    0% {
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
 .trusted-brands {
-    padding: 40px 0;
+    padding: 50px 0;
     background: var(--Backgrounds-Primary, #FFFFFF);
     border-bottom: 1px solid #F3F4F6;
 }
@@ -10,14 +24,16 @@
 .trusted-brands h2 {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     color: var(--text-dark);
+    letter-spacing: 0.3px;
 }
 
 .brands-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
+    animation: slideRightThenLeft 6s ease-in-out infinite;
 }
 
 .brand-item {
@@ -42,6 +58,7 @@
 
 .brand-item:hover img {
     opacity: 1;
+    transform: scale(1.08);
 }
 
 /* Responsive */

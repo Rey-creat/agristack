@@ -1,6 +1,30 @@
 /* ============================================================================
    CATEGORIES GRID
    ============================================================================ */
+
+/* Animation Keyframes */
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .categories-grid {
     padding: 40px 0;
     background: var(--bg-light);
@@ -22,12 +46,18 @@
     transition: var(--transition);
     border: 2px solid transparent;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    animation: slideUpIn 0.6s ease-out forwards;
 }
+
+.category-card:nth-child(1) { animation-delay: 0.1s; }
+.category-card:nth-child(2) { animation-delay: 0.2s; }
+.category-card:nth-child(3) { animation-delay: 0.3s; }
+.category-card:nth-child(4) { animation-delay: 0.4s; }
 
 .category-card:hover {
     border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    transform: translateY(-12px);
 }
 
 .category-card i {
@@ -40,12 +70,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover i {
+    transform: scale(1.15) rotate(5deg);
 }
 
 .category-card h3 {
     font-size: 18px;
     font-weight: 600;
     color: var(--text-dark);
+    letter-spacing: 0.3px;
 }
 
 .category-tractor i {

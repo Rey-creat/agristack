@@ -4,12 +4,121 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all event listeners
+    initPageTransitions();
     initCartFunctionality();
     initTabFiltering();
     initCarousel();
     initAddToCart();
     initSearch();
+    initParallax();
 });
+
+/* ============================================================================
+   SMOOTH PAGE TRANSITIONS
+   ============================================================================ */
+function initPageTransitions() {
+    // Add page load animation
+    document.body.style.opacity = '0';
+    document.body.style.animation = 'fadeInPage 0.8s ease-out forwards';
+    
+    // Add smooth scroll behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            if (target && href !== '#') {
+                e.preventDefault();
+                
+                // Smooth scroll with offset
+                const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // Highlight effect
+                target.style.transition = 'all 0.3s ease';
+                target.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.3)';
+                setTimeout(() => {
+                    target.style.boxShadow = '';
+                }, 800);
+            }
+        });
+    });
+    
+    // Observe elements for scroll animations
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections
+    document.querySelectorAll('section, .product-card, .collection-card, .category-card').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px) scale(0.95)';
+        element.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        observer.observe(element);
+    });
+}
+
+/* ============================================================================
+   PARALLAX EFFECT WITH SMOOTH TRANSITIONS
+   ============================================================================ */
+function initParallax() {
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    const parallaxSpeed = 0.5;
+    
+    window.addEventListener('scroll', function() {
+        parallaxElements.forEach(element => {
+            const scrollPos = window.scrollY;
+            const elementOffset = element.getBoundingClientRect().top + scrollPos;
+            const distance = scrollPos - elementOffset;
+            const yPos = distance * parallaxSpeed;
+            
+            element.style.transform = `translateY(${yPos}px)`;
+            element.style.transition = 'transform 0.1s ease-out';
+        });
+        
+        // Apply fade-in effects for sections on scroll
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight * 0.75) {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    });
+    
+    // Initial setup for parallax elements
+    parallaxElements.forEach(element => {
+        element.style.willChange = 'transform';
+        element.style.transition = 'transform 0.1s ease-out';
+    });
+    
+    // Fade-in effect for sections on page load
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = `all 0.6s ease-out ${index * 0.1}s`;
+    });
+    
+    window.dispatchEvent(new Event('scroll'));
+}
 
 /* ============================================================================
    CART FUNCTIONALITY

@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
                         </a>
                     </div>
@@ -66,7 +66,7 @@
     <!-- Page Navigation -->
     <section class="page-nav">
         <div class="nav-menu">
-            <a href="index.html" class="nav-link home-link">
+            <a href="index.php" class="nav-link home-link">
                 <i class="fas fa-home"></i> Home
             </a>
             <div class="categories-dropdown-menu">

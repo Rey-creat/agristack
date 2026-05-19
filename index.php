@@ -69,16 +69,16 @@
                     Categories
                 </button>
                 <div class="dropdown-submenu">
-                    <a href="tractors.html" class="submenu-item">
+                    <a href="tractors.php" class="submenu-item">
                         <i class=""></i> Tractors
                     </a>
-                    <a href="sprayers.html" class="submenu-item">
+                    <a href="sprayers.php" class="submenu-item">
                         <i class=""></i> Sprayers
                     </a>
-                    <a href="irrigation.html" class="submenu-item">
+                    <a href="irrigation.php" class="submenu-item">
                         <i class=""></i> Irrigation
                     </a>
-                    <a href="tools.html" class="submenu-item">
+                    <a href="tools.php" class="submenu-item">
                         <i class=""></i> Tools & Parts
                     </a>
                 </div>

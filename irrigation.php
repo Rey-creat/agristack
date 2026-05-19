@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprayers - AgriStack</title>
+    <title>Irrigation - AgriStack</title>
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
@@ -75,108 +75,38 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-submenu">
-                    <a href="tractors.html" class="submenu-item">Tractors</a>
-                    <a href="sprayers.html" class="submenu-item active">Sprayers</a>
-                    <a href="irrigation.html" class="submenu-item">Irrigation</a>
-                    <a href="tools.html" class="submenu-item">Tools & Parts</a>
+                    <a href="tractors.php" class="submenu-item">Tractors</a>
+                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
+                    <a href="irrigation.php" class="submenu-item active">Irrigation</a>
+                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
                 </div>
             </div>
-            <a href="brands.html" class="nav-link">Brands</a>
-            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
-            <a href="sale.html" class="nav-link sale">Sale</a>
+            <a href="brands.php" class="nav-link">Brands</a>
+            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
+            <a href="sale.php" class="nav-link sale">Sale</a>
         </div>
     </section>
 
-    <!-- Sprayers Category Section -->
+    <!-- Irrigation Category Section -->
     <section class="category-page">
         <div class="container">
             <div class="category-header">
-                <h1><i class="fas fa-spray-can"></i> Sprayers</h1>
-                <p>Professional crop spraying equipment for precision farming</p>
+                <h1><i class="fas fa-droplet"></i> Irrigation</h1>
+                <p>Advanced irrigation solutions for efficient water management</p>
             </div>
 
             <div class="products-grid">
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/irrigation-product-1.jpg" alt="Smart Irrigation Hub V2">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
-                            <h3>Pro Field Sprayer 2000</h3>
-                            <p class="product-brand">CASE IH</p>
-                            <div class="price-section">
-                                <span class="price">$4,200</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Precision Field Sprayer</h3>
-                            <p class="product-brand">John Deere</p>
-                            <div class="price-section">
-                                <span class="price">$5,500</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Crop Care Sprayer</h3>
-                            <p class="product-brand">Kubota</p>
-                            <div class="price-section">
-                                <span class="price">$3,800</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Advanced Spraying System</h3>
-                            <p class="product-brand">Mahindra</p>
-                            <div class="price-section">
-                                <span class="price">$4,900</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Efficient Boom Sprayer</h3>
-                            <p class="product-brand">New Holland</p>
-                            <div class="price-section">
-                                <span class="price">$3,200</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Ultra-Precision Sprayer</h3>
+                            <h3>Smart Irrigation Hub V2</h3>
                             <p class="product-brand">AgriTech</p>
                             <div class="price-section">
-                                <span class="price">$6,200</span>
+                                <span class="price">$850</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -184,13 +114,27 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/irrigation-product-2.jpg" alt="Precision Irrigation System">
                         </div>
                         <div class="product-info">
-                            <h3>Wide-Frame Field Sprayer</h3>
+                            <h3>Precision Irrigation System</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$1,200</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-3.jpg" alt="Automated Irrigation Manager">
+                        </div>
+                        <div class="product-info">
+                            <h3>Automated Irrigation Manager</h3>
                             <p class="product-brand">John Deere</p>
                             <div class="price-section">
-                                <span class="price">$7,800</span>
+                                <span class="price">$1,500</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -198,11 +142,67 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/irrigation-product-4.jpg" alt="Water Efficiency Controller">
                         </div>
                         <div class="product-info">
-                            <h3>Compact Spot Sprayer</h3>
-                            <p class="product-brand">Kubota</p>
+                            <h3>Water Efficiency Controller</h3>
+                            <p class="product-brand">CASE IH</p>
+                            <div class="price-section">
+                                <span class="price">$950</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-5.jpg" alt="Drip Irrigation Master">
+                        </div>
+                        <div class="product-info">
+                            <h3>Drip Irrigation Master</h3>
+                            <p class="product-brand">Mahindra</p>
+                            <div class="price-section">
+                                <span class="price">$1,800</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-6.jpg" alt="Smart Water Pump System">
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Water Pump System</h3>
+                            <p class="product-brand">New Holland</p>
+                            <div class="price-section">
+                                <span class="price">$2,100</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-7.jpg" alt="Micro-Sprinkler Solution">
+                        </div>
+                        <div class="product-info">
+                            <h3>Micro-Sprinkler Solution</h3>
+                            <p class="product-brand">John Deere</p>
+                            <div class="price-section">
+                                <span class="price">$1,350</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-8.jpg" alt="IoT-Enabled Irrigation">
+                        </div>
+                        <div class="product-info">
+                            <h3>IoT-Enabled Irrigation</h3>
+                            <p class="product-brand">AgriTech</p>
                             <div class="price-section">
                                 <span class="price">$2,450</span>
                             </div>
@@ -212,13 +212,27 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/irrigation-product-9.jpg" alt="Submerged Pump Controller">
                         </div>
                         <div class="product-info">
-                            <h3>Tank Capacity Sprayer Pro</h3>
+                            <h3>Submerged Pump Controller</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$1,600</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/irrigation-product-10.jpg" alt="Pivot Irrigation System">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pivot Irrigation System</h3>
                             <p class="product-brand">CASE IH</p>
                             <div class="price-section">
-                                <span class="price">$5,100</span>
+                                <span class="price">$3,200</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -226,27 +240,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/irrigation-product-11.jpg" alt="Solar-Powered Water Pump">
                         </div>
                         <div class="product-info">
-                            <h3>Garden & Farm Sprayer</h3>
+                            <h3>Solar-Powered Water Pump</h3>
                             <p class="product-brand">Mahindra</p>
                             <div class="price-section">
-                                <span class="price">$3,600</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Chemical Resistant Sprayer</h3>
-                            <p class="product-brand">New Holland</p>
-                            <div class="price-section">
-                                <span class="price">$4,350</span>
+                                <span class="price">$2,800</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>

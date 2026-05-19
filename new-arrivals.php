@@ -75,15 +75,15 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-submenu">
-                    <a href="tractors.html" class="submenu-item">Tractors</a>
-                    <a href="sprayers.html" class="submenu-item">Sprayers</a>
-                    <a href="irrigation.html" class="submenu-item">Irrigation</a>
-                    <a href="tools.html" class="submenu-item">Tools & Parts</a>
+                    <a href="tractors.php" class="submenu-item">Tractors</a>
+                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
+                    <a href="irrigation.php" class="submenu-item">Irrigation</a>
+                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
                 </div>
             </div>
-            <a href="brands.html" class="nav-link">Brands</a>
-            <a href="new-arrivals.html" class="nav-link active">New Arrivals</a>
-            <a href="sale.html" class="nav-link sale">Sale</a>
+            <a href="brands.php" class="nav-link">Brands</a>
+            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
+            <a href="sale.php" class="nav-link sale">Sale</a>
         </div>
     </section>
 

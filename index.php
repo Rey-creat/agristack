@@ -83,9 +83,9 @@
                     </a>
                 </div>
             </div>
-            <a href="brands.html" class="nav-link">Brands</a>
-            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
-            <a href="sale.html" class="nav-link sale">Sale</a>
+            <a href="brands.php" class="nav-link">Brands</a>
+            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
+            <a href="sale.php" class="nav-link sale">Sale</a>
         </div>
         <div class="hero-content">
             <div class="hero-text">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Parts - AgriStack</title>
+    <title>Tractors - AgriStack</title>
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
@@ -75,38 +75,38 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-submenu">
-                    <a href="tractors.html" class="submenu-item">Tractors</a>
-                    <a href="sprayers.html" class="submenu-item">Sprayers</a>
-                    <a href="irrigation.html" class="submenu-item">Irrigation</a>
-                    <a href="tools.html" class="submenu-item active">Tools & Parts</a>
+                    <a href="tractors.php" class="submenu-item active">Tractors</a>
+                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
+                    <a href="irrigation.php" class="submenu-item">Irrigation</a>
+                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
                 </div>
             </div>
-            <a href="brands.html" class="nav-link">Brands</a>
-            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
-            <a href="sale.html" class="nav-link sale">Sale</a>
+            <a href="brands.php" class="nav-link">Brands</a>
+            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
+            <a href="sale.php" class="nav-link sale">Sale</a>
         </div>
     </section>
 
-    <!-- Tools & Parts Category Section -->
+    <!-- Tractors Category Section -->
     <section class="category-page">
         <div class="container">
             <div class="category-header">
-                <h1><i class="fas fa-wrench"></i> Tools & Parts</h1>
-                <p>Complete range of agricultural tools and replacement parts</p>
+                <h1><i class="fas fa-tractor"></i> Tractors</h1>
+                <p>Premium tractors from the world's leading manufacturers</p>
             </div>
 
             <div class="products-grid">
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-1.jpg" alt="Compact Utility Tractor">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
-                            <h3>Heavy Duty Rotary Tiller</h3>
+                            <h3>Compact Utility Tractor</h3>
                             <p class="product-brand">John Deere</p>
                             <div class="price-section">
-                                <span class="price">$2,100</span>
+                                <span class="price">$18,400</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -114,13 +114,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-2.jpg" alt="Premium Utility Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Precision Seed Drill</h3>
+                            <h3>Premium Utility Tractor</h3>
                             <p class="product-brand">Kubota</p>
                             <div class="price-section">
-                                <span class="price">$1,800</span>
+                                <span class="price">$52,900</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -128,27 +128,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-3.jpg" alt="Row Crop Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Precision Seed Drill Pro</h3>
-                            <p class="product-brand">Mahindra</p>
-                            <div class="price-section">
-                                <span class="price">$2,400</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Universal Parts Kit</h3>
+                            <h3>Row Crop Tractor</h3>
                             <p class="product-brand">CASE IH</p>
                             <div class="price-section">
-                                <span class="price">$1,200</span>
+                                <span class="price">$67,300</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -156,13 +142,27 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-4.jpg" alt="Flagship Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Professional Tool Set</h3>
+                            <h3>Flagship Tractor</h3>
+                            <p class="product-brand">Mahindra</p>
+                            <div class="price-section">
+                                <span class="price">$61,200</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/tractor-product-5.jpg" alt="Heavy-Duty Farm Tractor">
+                        </div>
+                        <div class="product-info">
+                            <h3>Heavy-Duty Farm Tractor</h3>
                             <p class="product-brand">New Holland</p>
                             <div class="price-section">
-                                <span class="price">$950</span>
+                                <span class="price">$75,500</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -170,27 +170,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-6.jpg" alt="Mid-Size Agricultural Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Complete Maintenance Kit</h3>
-                            <p class="product-brand">Mahindra</p>
-                            <div class="price-section">
-                                <span class="price">$1,550</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Blade Replacement System</h3>
+                            <h3>Mid-Size Agricultural Tractor</h3>
                             <p class="product-brand">John Deere</p>
                             <div class="price-section">
-                                <span class="price">$1,700</span>
+                                <span class="price">$42,800</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -198,13 +184,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-7.jpg" alt="Compact Garden Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Hydraulic Component Pack</h3>
+                            <h3>Compact Garden Tractor</h3>
                             <p class="product-brand">Kubota</p>
                             <div class="price-section">
-                                <span class="price">$2,100</span>
+                                <span class="price">$28,900</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -212,27 +198,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-8.jpg" alt="Precision Power Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Sensor & Gauge Bundle</h3>
-                            <p class="product-brand">AgriTech</p>
-                            <div class="price-section">
-                                <span class="price">$850</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Belt Drive Assembly</h3>
+                            <h3>Precision Power Tractor</h3>
                             <p class="product-brand">CASE IH</p>
                             <div class="price-section">
-                                <span class="price">$1,350</span>
+                                <span class="price">$58,600</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -240,13 +212,41 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="placeholder">Image coming soon</div>
+                            <img src="images/tractor-product-9.jpg" alt="Professional Series Tractor">
                         </div>
                         <div class="product-info">
-                            <h3>Engine Overhaul Kit</h3>
+                            <h3>Professional Series Tractor</h3>
                             <p class="product-brand">Mahindra</p>
                             <div class="price-section">
-                                <span class="price">$2,650</span>
+                                <span class="price">$48,900</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/tractor-product-10.jpg" alt="Smart Connected Tractor">
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Connected Tractor</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$65,400</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/tractor-product-11.jpg" alt="EcoFarm Tractor Series">
+                        </div>
+                        <div class="product-info">
+                            <h3>EcoFarm Tractor Series</h3>
+                            <p class="product-brand">John Deere</p>
+                            <div class="price-section">
+                                <span class="price">$52,100</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>

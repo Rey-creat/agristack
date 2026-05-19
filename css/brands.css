@@ -1,5 +1,214 @@
 /* ============================================================================
-   TRUSTED BRANDS
+   BRANDS PAGE
+   ============================================================================ */
+
+.brands-page {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+    min-height: calc(100vh - 300px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.brand-item {
+    background: white;
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+}
+
+.brand-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 16px 32px rgba(34, 197, 94, 0.15);
+}
+
+.brand-item img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.brand-item:hover img {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.brand-item i {
+    font-size: 64px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 0.2;
+}
+
+.brand-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.brand-item p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.6;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-item .btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(34, 197, 94, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .brands-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-page {
+        padding: 40px 0;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .page-header p {
+        font-size: 16px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .brand-item {
+        padding: 24px 16px;
+        min-height: 280px;
+    }
+
+    .brand-item img {
+        height: 50px;
+
+    }
+
+    .brand-item i {
+        font-size: 48px;
+    }
+
+    .brand-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .brand-item {
+        padding: 20px 16px;
+        min-height: 250px;
+    }
+
+    .brand-item img {
+        height: 80px;
+        margin-bottom: 16px;
+    }
+
+    .brand-item h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .brand-item p {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .brand-item .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* ============================================================================
+   TRUSTED BRANDS (Original Section)
    ============================================================================ */
 
 /* Animation Keyframes */
@@ -29,41 +238,41 @@
     letter-spacing: 0.3px;
 }
 
-.brands-grid {
+.trusted-brands .brands-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     animation: slideRightThenLeft 6s ease-in-out infinite;
 }
 
-.brand-item {
+.trusted-brands .brand-item {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     background: transparent;
     border: none;
+    min-height: auto;
+    box-shadow: none;
     transition: var(--transition);
 }
 
-.brand-item:hover {
+.trusted-brands .brand-item:hover {
     transform: scale(1.05);
+    border-color: transparent;
+    box-shadow: none;
 }
 
-.brand-item img {
-    max-width: 80%;
+.trusted-brands .brand-item img {
+    max-width: 60%;
+    height: auto;
     opacity: 0.8;
-    transition: var(--transition);
+    transition: var(--transition);  
+    margin-bottom: 0;
+    border-radius:5px;
 }
 
-.brand-item:hover img {
+.trusted-brands .brand-item:hover img {
     opacity: 1;
     transform: scale(1.08);
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-    .brands-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }

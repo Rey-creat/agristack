@@ -66,9 +66,21 @@
     <!-- Page Navigation -->
     <section class="page-nav">
         <div class="nav-menu">
-            <a href="categories.html" class="nav-link">
-                <i class="fas fa-list"></i> Categories
+            <a href="index.html" class="nav-link home-link">
+                <i class="fas fa-home"></i> Home
             </a>
+            <div class="categories-dropdown-menu">
+                <button class="dropdown-link">
+                    <i class=""></i> Categories
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-submenu">
+                    <a href="tractors.html" class="submenu-item">Tractors</a>
+                    <a href="sprayers.html" class="submenu-item">Sprayers</a>
+                    <a href="irrigation.html" class="submenu-item">Irrigation</a>
+                    <a href="tools.html" class="submenu-item">Tools & Parts</a>
+                </div>
+            </div>
             <a href="brands.html" class="nav-link active">Brands</a>
             <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
             <a href="sale.html" class="nav-link sale">Sale</a>
@@ -85,35 +97,35 @@
 
             <div class="brands-grid">
                 <div class="brand-item">
-                    <img src="images/johndeere.png" alt="John Deere">
+                    <img src="images/johndeere-logo.jpg" alt="John Deere">
                     <h3>John Deere</h3>
                     <p>Industry leader in farming equipment</p>
                     <button class="btn btn-secondary">Shop Now</button>
                 </div>
 
                 <div class="brand-item">
-                    <img src="images/kubota.png" alt="Kubota">
+                    <img src="images/kubota-logo.jpg" alt="Kubota">
                     <h3>Kubota</h3>
                     <p>Quality and innovation since 1890</p>
                     <button class="btn btn-secondary">Shop Now</button>
                 </div>
 
                 <div class="brand-item">
-                    <img src="images/case.png" alt="CASE">
+                    <img src="images/case-logo.png" alt="CASE">
                     <h3>CASE IH</h3>
                     <p>Powerful equipment for modern farming</p>
                     <button class="btn btn-secondary">Shop Now</button>
                 </div>
 
                 <div class="brand-item">
-                    <img src="images/mahindra.png" alt="Mahindra">
+                    <img src="images/mahindra-logo.jpg" alt="Mahindra">
                     <h3>Mahindra</h3>
                     <p>Reliable tractors and equipment</p>
                     <button class="btn btn-secondary">Shop Now</button>
                 </div>
 
                 <div class="brand-item">
-                    <img src="images/newholland.png" alt="New Holland">
+                    <img src="images/newholland-logo.jpg" alt="New Holland">
                     <h3>New Holland</h3>
                     <p>Heritage of agricultural excellence</p>
                     <button class="btn btn-secondary">Shop Now</button>
@@ -134,36 +146,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>About AgriStack</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
+                    </div>
+                    <p>The world's leading agriculture equipment marketplace. Connecting farmers to quality equipment globally.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -171,14 +157,96 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
+
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Tractors</a></li>
+                        <li><a href="#">Harvesting</a></li>
+                        <li><a href="#">Planting & Seeding</a></li>
+                        <li><a href="#">Tillage</a></li>
+                        <li><a href="#">Hay & Forage</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Financing Options</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Payment Methods</h4>
+                    <div class="payment-icons">
+                        <img src="images/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="images/mastercard.jpg" alt="Mastercard" class="payment-icon">
+                        <img src="images/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="images/americanexpress.jpg" alt="American Express" class="payment-icon">
+                    </div>
+                    <h4 class="subscribe-title">Subscribe</h4>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button>Join</button>
+                    </div>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 AgriStack. All rights reserved.</p>
+                <p>&copy; 2024 AgriStack Marketplace. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Legal</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Categories dropdown in page navigation
+        const pageNavBtn = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-link');
+        const pageNavMenu = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-submenu');
+
+        if (pageNavBtn && pageNavMenu) {
+            // Toggle dropdown on button click
+            pageNavBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = pageNavMenu.classList.contains('active');
+                if (isOpen) {
+                    pageNavMenu.classList.remove('active');
+                    pageNavBtn.classList.remove('active');
+                } else {
+                    pageNavMenu.classList.add('active');
+                    pageNavBtn.classList.add('active');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                const isClickInsideMenu = e.target.closest('.page-nav .categories-dropdown-menu');
+                if (!isClickInsideMenu && pageNavMenu.classList.contains('active')) {
+                    pageNavMenu.classList.remove('active');
+                    pageNavBtn.classList.remove('active');
+                }
+            });
+
+            // Close dropdown after clicking a link
+            const links = pageNavMenu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Don't prevent default - let the link navigate
+                    pageNavMenu.classList.remove('active');
+                    pageNavBtn.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

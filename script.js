@@ -206,6 +206,7 @@ function initSearch() {
    ============================================================================ */
 function initCarousel() {
     const dots = document.querySelectorAll('.dot');
+    const slides = document.querySelectorAll('.hero-slide');
     let currentSlide = 0;
 
     dots.forEach((dot, index) => {
@@ -216,8 +217,17 @@ function initCarousel() {
     });
 
     function updateCarousel() {
+        // Update slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        if (slides[currentSlide]) {
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Update dots
         dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentSlide].classList.add('active');
+        if (dots[currentSlide]) {
+            dots[currentSlide].classList.add('active');
+        }
     }
 
     // Auto-advance carousel every 5 seconds
@@ -230,6 +240,145 @@ function initCarousel() {
 /* ============================================================================
    TAB FILTERING
    ============================================================================ */
+/* ============================================================================
+   PRODUCT DATA FOR DIFFERENT TABS
+   ============================================================================ */
+const productsData = {
+    'Best Sellers': [
+        {
+            title: 'Next-Gen Farming Tractor',
+            image: 'images/nextgen.jpg',
+            price: '$18,400',
+            badge: 'Sale'
+        },
+        {
+            title: 'Ultra-Precise Crop Spraying System',
+            image: 'images/Spraying System.jpg',
+            price: '$4,200',
+            badge: ''
+        },
+        {
+            title: 'Intelligent Irrigation Management',
+            image: 'images/IntelligentIrrigation.jpg',
+            price: '$850',
+            badge: ''
+        },
+        {
+            title: 'Commercial Grade Soil Tiller',
+            image: 'images/GradeSoilTiller.jpg',
+            price: '$2,100',
+            badge: ''
+        }
+    ],
+    'Trending': [
+        {
+            title: 'Smart IoT Tractor System',
+            image: 'images/compact utility.jpg',
+            price: '$22,900',
+            badge: 'Hot'
+        },
+        {
+            title: 'Automated Pest Control Sprayer',
+            image: 'images/sprayer.jpg',
+            price: '$5,800',
+            badge: ''
+        },
+        {
+            title: 'AI-Powered Crop Monitor',
+            image: 'images/smartirrigation.jpg',
+            price: '$1,200',
+            badge: 'New'
+        },
+        {
+            title: 'Precision Seed Drill Machine',
+            image: 'images/heavyduty.jpg',
+            price: '$3,450',
+            badge: 'Hot'
+        }
+    ],
+    'Sale': [
+        {
+            title: 'Compact Utility Tractor 3025E',
+            image: 'images/compact utility.jpg',
+            price: '$18,400',
+            badge: 'Sale',
+            originalPrice: '$21,000'
+        },
+        {
+            title: 'Pro Field Sprayer 2000',
+            image: 'images/sprayer.jpg',
+            price: '$3,500',
+            badge: 'Sale',
+            originalPrice: '$4,800'
+        },
+        {
+            title: 'Smart Irrigation Hub V2',
+            image: 'images/smartirrigation.jpg',
+            price: '$599',
+            badge: 'Sale',
+            originalPrice: '$850'
+        },
+        {
+            title: 'Heavy Duty Rotary Tiller',
+            image: 'images/heavyduty.jpg',
+            price: '$1,799',
+            badge: 'Sale',
+            originalPrice: '$2,100'
+        }
+    ]
+};
+
+function renderCollectionCards(products) {
+    const collectionGrid = document.querySelector('.collection-grid');
+    if (!collectionGrid) return;
+    
+    collectionGrid.innerHTML = '';
+    
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'collection-card';
+        card.style.animation = 'slideInUp 0.5s ease forwards';
+        
+        const badgeHTML = product.badge ? `<span class="sale-badge">${product.badge}</span>` : '';
+        const originalPriceHTML = product.originalPrice ? `<p class="original-price">${product.originalPrice}</p>` : '';
+        
+        card.innerHTML = `
+            <div class="collection-image">
+                <img src="${product.image}" alt="${product.title}">
+                ${badgeHTML}
+            </div>
+            <h3>${product.title}</h3>
+            <div class="price-section">
+                <p class="price">${product.price}</p>
+                ${originalPriceHTML}
+            </div>
+            <button class="btn-add-cart">Add to Cart</button>
+        `;
+        
+        collectionGrid.appendChild(card);
+    });
+    
+    // Re-attach hover effects to new cards
+    document.querySelectorAll('.collection-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const img = this.querySelector('img');
+            if (img) {
+                img.style.transform = 'scale(1.05)';
+            }
+        });
+
+        card.addEventListener('mouseleave', function() {
+            const img = this.querySelector('img');
+            if (img) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
+    
+    // Re-attach add to cart functionality
+    initAddToCart();
+}
+
 function initTabFiltering() {
     const tabs = document.querySelectorAll('.tab');
 
@@ -244,16 +393,27 @@ function initTabFiltering() {
             const filterType = this.textContent.trim();
             console.log('Filtering by:', filterType);
             
-            // Add animation to collection cards
-            const cards = document.querySelectorAll('.collection-card');
-            cards.forEach(card => {
-                card.style.animation = 'none';
+            // Get products for the selected tab
+            const selectedProducts = productsData[filterType];
+            
+            if (selectedProducts) {
+                // Fade out current cards
+                const cards = document.querySelectorAll('.collection-card');
+                cards.forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(-20px)';
+                });
+                
+                // Render new cards after fade out
                 setTimeout(() => {
-                    card.style.animation = 'slideInUp 0.5s ease forwards';
-                }, 10);
-            });
+                    renderCollectionCards(selectedProducts);
+                }, 300);
+            }
         });
     });
+    
+    // Initialize with Best Sellers
+    renderCollectionCards(productsData['Best Sellers']);
 }
 
 /* ============================================================================

@@ -64,9 +64,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="nav-menu">
-            <a href="categories.html" class="nav-link">
-                <i class="fas fa-list"></i> Categories
-            </a>
+            <div class="categories-dropdown-menu">
+                <button class="dropdown-link">
+                    Categories
+                </button>
+                <div class="dropdown-submenu">
+                    <a href="tractors.html" class="submenu-item">
+                        <i class=""></i> Tractors
+                    </a>
+                    <a href="sprayers.html" class="submenu-item">
+                        <i class=""></i> Sprayers
+                    </a>
+                    <a href="irrigation.html" class="submenu-item">
+                        <i class=""></i> Irrigation
+                    </a>
+                    <a href="tools.html" class="submenu-item">
+                        <i class=""></i> Tools & Parts
+                    </a>
+                </div>
+            </div>
             <a href="brands.html" class="nav-link">Brands</a>
             <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
             <a href="sale.html" class="nav-link sale">Sale</a>
@@ -81,12 +97,36 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-image">
-                    <img src="images/home.png" alt="Modern Green Tractor">
-                    <div class="image-label">
-                        <p class="brand">Featured</p>
-                        <p class="model">2024 Smart Tractor X9</p>
-                        <p class="price">$84,500</p>
+                <div class="hero-carousel-container">
+                    <div class="hero-slide active">
+                        <div class="hero-image">
+                            <img src="images/smart-tractor.jpg" alt="Modern Green Tractor">
+                            <div class="image-label">
+                                <p class="brand">Featured</p>
+                                <p class="model">2024 Smart Tractor X9</p>
+                                <p class="price">$84,500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-image">
+                            <img src="images/pro-sprayers.jpg" alt="Pro Field Sprayer">
+                            <div class="image-label">
+                                <p class="brand">Featured</p>
+                                <p class="model">Pro Precision Sprayer</p>
+                                <p class="price">$4,200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-image">
+                            <img src="images/IntelligentIrrigation.jpg" alt="Smart Irrigation System">
+                            <div class="image-label">
+                                <p class="brand">Featured</p>
+                                <p class="model">Smart Irrigation Hub</p>
+                                <p class="price">$850</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-carousel">
@@ -104,48 +144,25 @@
             <h2>Trusted Brands</h2>
             <div class="brands-grid">
                 <div class="brand-item">
-                    <img src="images/johndeere.png" alt="John Deere">
+                    <img src="images/johndeere-logo.jpg" alt="John Deere">
                 </div>
                 <div class="brand-item">
-                    <img src="images/kubota.png" alt="Kubota">
+                    <img src="images/kubota-logo.jpg" alt="Kubota">
                 </div>
                 <div class="brand-item">
-                    <img src="images/case.png" alt="CASE">
+                    <img src="images/case-logo.png" alt="CASE">
                 </div>
                 <div class="brand-item">
-                    <img src="images/mahindra.png" alt="Mahindra">
+                    <img src="images/mahindra-logo.jpg" alt="Mahindra">
                 </div>
                 <div class="brand-item">
-                    <img src="images/newholland.png" alt="New Holland">
+                    <img src="images/newholland-logo.jpg" alt="New Holland">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Grid -->
-    <section class="categories-grid">
-        <div class="container">
-            <div class="grid-wrapper">
-                <div class="category-card category-tractor">
-                    <i class="fas fa-tractor"></i>
-                    <h3>Tractors</h3>
-                </div>
-                <div class="category-card category-sprayer">
-                    <i class="fas fa-spray-can"></i>
-                    <h3>Sprayers</h3>
-                </div>
-                <div class="category-card category-irrigation">
-                    <i class="fas fa-droplet"></i>
-                    <h3>Irrigation</h3>
-                </div>
-                <div class="category-card category-tools">
-                    <i class="fas fa-wrench"></i>
-                    <h3>Tools & Parts</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <!-- Featured Equipment -->
     <section class="featured-equipment">
         <div class="container">
@@ -283,9 +300,9 @@
 
                 <div class="collection-card">
                     <div class="collection-image">
-                        <img src="images/IntelligentIrrigation.jpg" alt="Irrigation">
+                        <img src="images/Irrigation.jpg" alt="Irrigation">
                     </div>
-                    <h3>Intelligent Irrigation Management</h3>
+                    <h3>Smart Irrigation Hub</h3>
                     <p class="price">$850</p>
                     <button class="btn-add-cart">Add to Cart</button>
                 </div>
@@ -370,5 +387,45 @@
 
     <!-- Script File -->
     <script src="script.js"></script>
+    <script>
+        // Categories dropdown in hero section
+        const dropdownLink = document.querySelector('.categories-dropdown-menu .dropdown-link');
+        const dropdownSubmenu = document.querySelector('.categories-dropdown-menu .dropdown-submenu');
+
+        if (dropdownLink && dropdownSubmenu) {
+            dropdownLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownSubmenu.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.categories-dropdown-menu')) {
+                    dropdownSubmenu.classList.remove('active');
+                    dropdownLink.classList.remove('active');
+                }
+            });
+
+            // Close dropdown when item is clicked
+            document.querySelectorAll('.categories-dropdown-menu .submenu-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    dropdownSubmenu.classList.remove('active');
+                    dropdownLink.classList.remove('active');
+                });
+            });
+        }
+
+        // Prevent featured collections tabs from changing images
+        const tabs = document.querySelectorAll('.filter-tabs .tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>

@@ -114,7 +114,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-2.jpg" alt="Premium Utility Tractor">
+                            <img src="images/PUTractor.jpg" alt="Premium Utility Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Premium Utility Tractor</h3>
@@ -128,7 +128,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-3.jpg" alt="Row Crop Tractor">
+                            <img src="images/RCTractor.jpg" alt="Row Crop Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Row Crop Tractor</h3>
@@ -142,7 +142,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-4.jpg" alt="Flagship Tractor">
+                            <img src="images/6RFSTractor.jpg" alt="Flagship Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Flagship Tractor</h3>
@@ -156,7 +156,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-5.jpg" alt="Heavy-Duty Farm Tractor">
+                            <img src="images/HDTractor.jpg" alt="Heavy-Duty Farm Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Heavy-Duty Farm Tractor</h3>
@@ -170,7 +170,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-6.jpg" alt="Mid-Size Agricultural Tractor">
+                            <img src="images/MSTractor.jpg" alt="Mid-Size Agricultural Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Mid-Size Agricultural Tractor</h3>
@@ -184,7 +184,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-7.jpg" alt="Compact Garden Tractor">
+                            <img src="images/CGTractor.jpg" alt="Compact Garden Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Compact Garden Tractor</h3>
@@ -198,7 +198,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-8.jpg" alt="Precision Power Tractor">
+                            <img src="images/9rPPTractor.jpg" alt="Precision Power Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Precision Power Tractor</h3>
@@ -212,7 +212,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-9.jpg" alt="Professional Series Tractor">
+                            <img src="images/ProSTractor.jpg" alt="Professional Series Tractor">
                         </div>
                         <div class="product-info">
                             <h3>Professional Series Tractor</h3>
@@ -240,7 +240,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-11.jpg" alt="EcoFarm Tractor Series">
+                            <img src="images/EFSTractor.jpg" alt="EcoFarm Tractor Series">
                         </div>
                         <div class="product-info">
                             <h3>EcoFarm Tractor Series</h3>

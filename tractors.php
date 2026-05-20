@@ -99,7 +99,7 @@
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-1.jpg" alt="Compact Utility Tractor">
+                            <img src="images/CUTractor.png" alt="Compact Utility Tractor">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">

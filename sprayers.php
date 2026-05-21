@@ -99,7 +99,7 @@
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-1.jpg" alt="Pro Field Sprayer 2000">
+                            <img src="images/PFS2000.jpg" alt="Pro Field Sprayer 2000">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
@@ -114,7 +114,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-2.jpg" alt="Precision Field Sprayer">
+                            <img src="images/PreFS.jpg" alt="Precision Field Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Precision Field Sprayer</h3>
@@ -128,7 +128,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-3.jpg" alt="Crop Care Sprayer">
+                            <img src="images/CCareS.jpg" alt="Crop Care Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Crop Care Sprayer</h3>
@@ -142,7 +142,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-4.jpg" alt="Advanced Spraying System">
+                            <img src="images/ASS.jpg" alt="Advanced Spraying System">
                         </div>
                         <div class="product-info">
                             <h3>Advanced Spraying System</h3>
@@ -156,7 +156,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-5.jpg" alt="Efficient Boom Sprayer">
+                            <img src="images/EBoomS.jpg" alt="Efficient Boom Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Efficient Boom Sprayer</h3>
@@ -170,7 +170,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-6.jpg" alt="Ultra-Precision Sprayer">
+                            <img src="images/UPreS.jpg" alt="Ultra-Precision Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Ultra-Precision Sprayer</h3>
@@ -184,7 +184,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-7.jpg" alt="Wide-Frame Field Sprayer">
+                            <img src="images/WFrameS.jpg" alt="Wide-Frame Field Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Wide-Frame Field Sprayer</h3>
@@ -198,7 +198,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-8.jpg" alt="Compact Spot Sprayer">
+                            <img src="images/CSpotS.jpg" alt="Compact Spot Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Compact Spot Sprayer</h3>
@@ -212,7 +212,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-9.jpg" alt="Tank Capacity Sprayer Pro">
+                            <img src="images/TCapS.jpg" alt="Tank Capacity Sprayer Pro">
                         </div>
                         <div class="product-info">
                             <h3>Tank Capacity Sprayer Pro</h3>
@@ -226,7 +226,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-10.jpg" alt="Garden & Farm Sprayer">
+                            <img src="images/G&FS.jpg" alt="Garden & Farm Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Garden & Farm Sprayer</h3>
@@ -240,7 +240,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/sprayer-product-11.jpg" alt="Chemical Resistant Sprayer">
+                            <img src="images/CResS.jpg" alt="Chemical Resistant Sprayer">
                         </div>
                         <div class="product-info">
                             <h3>Chemical Resistant Sprayer</h3>

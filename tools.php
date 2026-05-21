@@ -99,7 +99,7 @@
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-1.jpg" alt="Heavy Duty Rotary Tiller">
+                            <img src="images/rotary-tiller.jpg" alt="Heavy Duty Rotary Tiller">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
@@ -114,7 +114,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-2.jpg" alt="Precision Seed Drill">
+                            <img src="images/PreSD.jpg" alt="Precision Seed Drill">
                         </div>
                         <div class="product-info">
                             <h3>Precision Seed Drill</h3>
@@ -128,7 +128,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-3.jpg" alt="Precision Seed Drill Pro">
+                            <img src="images/PreSDPro.jpg" alt="Precision Seed Drill Pro">
                         </div>
                         <div class="product-info">
                             <h3>Precision Seed Drill Pro</h3>
@@ -142,7 +142,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-4.jpg" alt="Universal Parts Kit">
+                            <img src="images/UToolSet.jpg" alt="Universal Parts Kit">
                         </div>
                         <div class="product-info">
                             <h3>Universal Parts Kit</h3>
@@ -156,7 +156,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-5.jpg" alt="Professional Tool Set">
+                            <img src="images/ProToolSet.jpg" alt="Professional Tool Set">
                         </div>
                         <div class="product-info">
                             <h3>Professional Tool Set</h3>
@@ -170,7 +170,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-6.jpg" alt="Complete Maintenance Kit">
+                            <img src="images/MaintKit.jpg" alt="Complete Maintenance Kit">
                         </div>
                         <div class="product-info">
                             <h3>Complete Maintenance Kit</h3>
@@ -184,7 +184,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-7.jpg" alt="Blade Replacement System">
+                            <img src="images/BReplacement.jpg" alt="Blade Replacement System">
                         </div>
                         <div class="product-info">
                             <h3>Blade Replacement System</h3>
@@ -198,7 +198,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-8.jpg" alt="Hydraulic Component Pack">
+                            <img src="images/HTParts.jpg" alt="Hydraulic Component Pack">
                         </div>
                         <div class="product-info">
                             <h3>Hydraulic Component Pack</h3>
@@ -212,7 +212,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-9.jpg" alt="Sensor & Gauge Bundle">
+                            <img src="images/S&G.jpg" alt="Sensor & Gauge Bundle">
                         </div>
                         <div class="product-info">
                             <h3>Sensor & Gauge Bundle</h3>
@@ -226,7 +226,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-10.jpg" alt="Belt Drive Assembly">
+                            <img src="images/Belt.jpg" alt="Belt Drive Assembly">
                         </div>
                         <div class="product-info">
                             <h3>Belt Drive Assembly</h3>
@@ -240,7 +240,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tools-product-11.jpg" alt="Engine Overhaul Kit">
+                            <img src="images/EngineOH.jpg" alt="Engine Overhaul Kit">
                         </div>
                         <div class="product-info">
                             <h3>Engine Overhaul Kit</h3>

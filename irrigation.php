@@ -99,7 +99,7 @@
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/SmartIHV2.jpg" alt="Smart Irrigation Hub V2">
+                            <img src="images/SmartIHv2.jpg" alt="Smart Irrigation Hub V2">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
@@ -198,7 +198,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/IoTES.jpg" alt="IoT-Enabled Irrigation">
+                            <img src="images/IoTES.png" alt="IoT-Enabled Irrigation">
                         </div>
                         <div class="product-info">
                             <h3>IoT-Enabled Irrigation</h3>

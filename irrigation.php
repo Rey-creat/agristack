@@ -99,7 +99,7 @@
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-1.jpg" alt="Smart Irrigation Hub V2">
+                            <img src="images/SmartIHV2.jpg" alt="Smart Irrigation Hub V2">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
@@ -114,7 +114,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-2.jpg" alt="Precision Irrigation System">
+                            <img src="images/PreIS.jpg" alt="Precision Irrigation System">
                         </div>
                         <div class="product-info">
                             <h3>Precision Irrigation System</h3>
@@ -128,7 +128,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-3.jpg" alt="Automated Irrigation Manager">
+                            <img src="images/AutoIS.jpg" alt="Automated Irrigation Manager">
                         </div>
                         <div class="product-info">
                             <h3>Automated Irrigation Manager</h3>
@@ -142,7 +142,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-4.jpg" alt="Water Efficiency Controller">
+                            <img src="images/WaterEffI.jpg" alt="Water Efficiency Controller">
                         </div>
                         <div class="product-info">
                             <h3>Water Efficiency Controller</h3>
@@ -156,7 +156,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-5.jpg" alt="Drip Irrigation Master">
+                            <img src="images/DripIM.jpg" alt="Drip Irrigation Master">
                         </div>
                         <div class="product-info">
                             <h3>Drip Irrigation Master</h3>
@@ -170,7 +170,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-6.jpg" alt="Smart Water Pump System">
+                            <img src="images/SmartWPump.jpg" alt="Smart Water Pump System">
                         </div>
                         <div class="product-info">
                             <h3>Smart Water Pump System</h3>
@@ -184,7 +184,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-7.jpg" alt="Micro-Sprinkler Solution">
+                            <img src="images/MicroSprinkler.jpg" alt="Micro-Sprinkler Solution">
                         </div>
                         <div class="product-info">
                             <h3>Micro-Sprinkler Solution</h3>
@@ -198,7 +198,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-8.jpg" alt="IoT-Enabled Irrigation">
+                            <img src="images/IoTES.jpg" alt="IoT-Enabled Irrigation">
                         </div>
                         <div class="product-info">
                             <h3>IoT-Enabled Irrigation</h3>
@@ -212,7 +212,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-9.jpg" alt="Submerged Pump Controller">
+                            <img src="images/SubPumpC.jpg" alt="Submerged Pump Controller">
                         </div>
                         <div class="product-info">
                             <h3>Submerged Pump Controller</h3>
@@ -226,7 +226,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-10.jpg" alt="Pivot Irrigation System">
+                            <img src="images/PivotIS.jpg" alt="Pivot Irrigation System">
                         </div>
                         <div class="product-info">
                             <h3>Pivot Irrigation System</h3>
@@ -240,7 +240,7 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/irrigation-product-11.jpg" alt="Solar-Powered Water Pump">
+                            <img src="images/SolarIS.jpg" alt="Solar-Powered Water Pump">
                         </div>
                         <div class="product-info">
                             <h3>Solar-Powered Water Pump</h3>

@@ -2,21 +2,59 @@
    CSS VARIABLES & ROOT STYLES
    ============================================================================ */
 :root {
+    /* Primary Colors - Agricultural Green */
     --primary-color: #22c55e;
     --primary-dark: #16a34a;
     --primary-light: #4ade80;
+    
+    /* Earth Tones - Professional Agricultural Look */
+    --earth-brown: #92400e;
+    --earth-light-brown: #b45309;
+    --earth-tan: #d4a574;
+    --earth-light-tan: #e8d4c4;
+    --soil-dark: #654321;
+    --soil-medium: #8b6f47;
+    
+    /* Accent Colors */
     --secondary-color: #f97316;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --border-color: #e5e7eb;
-    --bg-light: #f9fafb;
-    --bg-white: #ffffff;
+    --accent-blue: #3b82f6;
+    --accent-warm: #f59e0b;
+    
+    /* Status Colors */
     --success-color: #22c55e;
+    --success-light: #d1fae5;
+    --warning-color: #eab308;
+    --warning-light: #fef3c7;
     --danger-color: #ef4444;
+    --danger-light: #fee2e2;
+    --info-color: #3b82f6;
+    --info-light: #dbeafe;
+    
+    /* Text Colors */
+    --text-dark: #1f2937;
+    --text-medium: #4b5563;
+    --text-light: #6b7280;
+    --text-lighter: #9ca3af;
+    
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-lighter: #f3f4f6;
+    --bg-earth: #faf8f3;
+    
+    /* Border & Shadow */
+    --border-color: #e5e7eb;
+    --border-light: #f3f4f6;
+    --border-earth: #ede9e3;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
     --transition: all 0.3s ease;
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.4s ease;
 }
 
 /* ============================================================================
@@ -38,6 +76,48 @@ body {
     background-color: var(--bg-white);
     line-height: 1.6;
     transition: all 0.3s ease;
+    letter-spacing: -0.3px;
+}
+
+/* Typography System */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: var(--text-light);
+    line-height: 1.7;
 }
 
 .container {
@@ -57,12 +137,202 @@ button {
     border: none;
     font-size: inherit;
     font-family: inherit;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* Professional Button Styles */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-color);
+    background: var(--bg-white);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* ============================================================================
+   PROFESSIONAL BADGE SYSTEM
+   ============================================================================ */
+
+/* Base Badge Style */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-fast);
+}
+
+/* Stock Status Badges */
+.badge-stock {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    background: var(--success-light);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-color);
+}
+
+.badge-stock.in-stock {
+    background: var(--success-light);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-color);
+}
+
+.badge-stock.low-stock {
+    background: var(--warning-light);
+    color: var(--earth-light-brown);
+    border: 1px solid var(--accent-warm);
+}
+
+.badge-stock.pre-order {
+    background: var(--info-light);
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+.badge-stock.out-of-stock {
+    background: var(--danger-light);
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}
+
+/* Warranty Badge */
+.badge-warranty {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+    color: var(--accent-blue);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-warranty i {
+    font-size: 14px;
+}
+
+/* Authenticity / Verified Badge */
+.badge-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+    color: var(--primary-dark);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-verified i {
+    font-size: 14px;
+}
+
+/* Premium Badge */
+.badge-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+    color: var(--earth-light-brown);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-premium i {
+    font-size: 14px;
+}
+
+/* Sale Badge (used in products) */
+.badge-sale {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary-color), var(--earth-light-brown));
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+/* Badge Container (for multiple badges) */
+.badges-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
 }
 
 /* ============================================================================

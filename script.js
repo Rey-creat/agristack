@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAddToCart();
     initSearch();
     initParallax();
+    initDashboard();
 });
 
 /* ============================================================================
@@ -580,4 +581,211 @@ window.addEventListener('scroll', function() {
     }
 });
 
-console.log('AgriStack Homepage loaded successfully!');
+/* ============================================================================
+   DASHBOARD FUNCTIONALITY
+   ============================================================================ */
+function initDashboard() {
+    // Check if we're on the dashboard page
+    if (!document.querySelector('.dashboard-container')) {
+        return;
+    }
+
+    // Initialize tab switching
+    initDashboardTabs();
+    
+    // Initialize order filtering
+    initOrderFiltering();
+    
+    // Initialize wishlist interactions
+    initWishlistInteractions();
+    
+    // Initialize RFQ functionality
+    initRFQFunctionality();
+    
+    // Initialize ticket functionality
+    initTicketFunctionality();
+    
+    // Initialize settings form
+    initSettingsForm();
+}
+
+/* ============================================================================
+   DASHBOARD TAB SWITCHING
+   ============================================================================ */
+function initDashboardTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and content
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+            
+            // Log for analytics
+            console.log('Dashboard tab switched to:', tabId);
+        });
+    });
+}
+
+/* ============================================================================
+   ORDER FILTERING
+   ============================================================================ */
+function initOrderFiltering() {
+    const filterSelect = document.getElementById('orderFilter');
+    const orderCards = document.querySelectorAll('.order-card');
+    
+    if (!filterSelect) return;
+    
+    filterSelect.addEventListener('change', function() {
+        const selectedStatus = this.value;
+        
+        orderCards.forEach(card => {
+            const cardStatus = card.getAttribute('data-status');
+            
+            if (selectedStatus === 'all' || cardStatus === selectedStatus) {
+                card.style.display = 'block';
+                card.style.animation = 'fadeIn 0.3s ease-in';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        console.log('Orders filtered by:', selectedStatus);
+    });
+}
+
+/* ============================================================================
+   WISHLIST INTERACTIONS
+   ============================================================================ */
+function initWishlistInteractions() {
+    const removeButtons = document.querySelectorAll('.remove-btn');
+    const addToCartButtons = document.querySelectorAll('.wishlist-item .btn-primary');
+    
+    // Remove from wishlist
+    removeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const wishlistItem = this.closest('.wishlist-item');
+            
+            // Smooth removal animation
+            wishlistItem.style.animation = 'fadeOut 0.3s ease-out forwards';
+            
+            setTimeout(() => {
+                wishlistItem.remove();
+                console.log('Item removed from wishlist');
+            }, 300);
+        });
+    });
+    
+    // Add to cart from wishlist
+    addToCartButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const productName = this.closest('.wishlist-item').querySelector('h3').textContent;
+            
+            // Simulate adding to cart
+            const originalText = this.textContent;
+            this.textContent = '✓ Added to Cart';
+            this.style.background = 'var(--primary-color)';
+            
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.style.background = '';
+            }, 2000);
+            
+            console.log('Added to cart from wishlist:', productName);
+        });
+    });
+}
+
+/* ============================================================================
+   RFQ FUNCTIONALITY
+   ============================================================================ */
+function initRFQFunctionality() {
+    const createRFQBtns = document.querySelectorAll('[data-action="create-rfq"]');
+    
+    createRFQBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            console.log('Create new RFQ clicked');
+            // In a real app, this would open a form modal
+        });
+    });
+}
+
+/* ============================================================================
+   TICKET FUNCTIONALITY
+   ============================================================================ */
+function initTicketFunctionality() {
+    const createTicketBtns = document.querySelectorAll('[data-action="create-ticket"]');
+    const viewTicketBtns = document.querySelectorAll('.ticket-card .btn');
+    
+    createTicketBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            console.log('Create new ticket clicked');
+            // In a real app, this would open a form modal
+        });
+    });
+    
+    viewTicketBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const ticketId = this.closest('.ticket-card').querySelector('h3').textContent;
+            console.log('Viewing ticket:', ticketId);
+        });
+    });
+}
+
+/* ============================================================================
+   SETTINGS FORM HANDLING
+   ============================================================================ */
+function initSettingsForm() {
+    const settingsForms = document.querySelectorAll('.settings-form');
+    const toggleSwitches = document.querySelectorAll('.toggle-switch input');
+    
+    // Handle form submissions
+    settingsForms.forEach(form => {
+        const saveBtn = form.querySelector('.btn-primary');
+        const inputs = form.querySelectorAll('input');
+        
+        if (saveBtn) {
+            saveBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = {};
+                inputs.forEach(input => {
+                    formData[input.id] = input.value;
+                });
+                
+                console.log('Saving settings:', formData);
+                
+                // Show success message
+                const originalText = this.textContent;
+                this.textContent = '✓ Changes Saved';
+                this.style.background = 'var(--primary-color)';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.background = '';
+                }, 2000);
+            });
+        }
+    });
+    
+    // Handle toggle switches
+    toggleSwitches.forEach(toggle => {
+        toggle.addEventListener('change', function() {
+            const preference = this.closest('.setting-toggle').querySelector('.toggle-label p').textContent;
+            console.log(`${preference} toggled:`, this.checked);
+        });
+    });
+}
+
+console.log('AgriStack Dashboard loaded successfully!');

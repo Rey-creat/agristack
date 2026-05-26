@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Arrivals - AgriStack</title>
+    <title>Sale - AgriStack</title>
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <a href="index.php">
+                        <a href="index.html">
                             <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
                         </a>
                     </div>
@@ -49,10 +49,10 @@
                     </div>
 
                     <div class="nav-icons">
-                        <div class="user-menu">
+                        <a href="login.html" class="user-menu">
                             <i class="fas fa-user"></i>
                             <span>Account</span>
-                        </div>
+                        </a>
                         <div class="cart-icon">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
@@ -61,287 +61,239 @@
                 </div>
             </div>
         </nav>
-    </header>
 
-    <!-- Page Navigation -->
-    <section class="page-nav">
-        <div class="nav-menu">
-            <a href="index.php" class="nav-link home-link">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <div class="categories-dropdown-menu">
-                <button class="dropdown-link">
-                    <i class=""></i> Categories
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-submenu">
-                    <a href="tractors.php" class="submenu-item">Tractors</a>
-                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
-                    <a href="irrigation.php" class="submenu-item">Irrigation</a>
-                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
+        <!-- Mega Menu Navigation -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            <i class="fas fa-th-large"></i> Categories
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
+                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
+                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
+                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Shop By Brand</h4>
+                                <ul>
+                                    <li><a href="brands.html?brand=john-deere">John Deere</a></li>
+                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
+                                    <li><a href="brands.html?brand=case">CASE</a></li>
+                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="brands.html" class="mega-menu-link">Brands</a>
+                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
+                    <a href="sale.html" class="mega-menu-link sale-link">
+                        <i class="fas fa-tag"></i> Sale
+                    </a>
                 </div>
             </div>
-            <a href="brands.php" class="nav-link">Brands</a>
-            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
-            <a href="sale.php" class="nav-link sale">Sale</a>
+        </nav>
+    </header>
+
+    <!-- Sale Banner -->
+    <section class="sale-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1><i class="fas fa-tag"></i> Mega Sale - Up to 50% OFF</h1>
+                <p>Limited time offers on premium agricultural equipment</p>
+            </div>
         </div>
     </section>
 
-    <!-- New Arrivals Section -->
-    <section class="new-arrivals-page">
+    <!-- Sale Products Section -->
+    <section class="sale-page">
         <div class="container">
             <div class="page-header">
-                <h1>New Arrivals</h1>
-                <p>Discover the latest agricultural equipment and technology</p>
+                <h1>Special Offers</h1>
+                <p>Don't miss out on these incredible deals</p>
             </div>
 
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/compact-utility.jpg" alt="Compact Utility Tractor">
-                        <span class="badge new">New</span>
+                        <img src="images/Kubota-tractor.jpg" alt="Compact Utility Tractor">
+                        <span class="badge sale">-14% OFF</span>
                     </div>
                     <div class="product-info">
-                        <h3>John Deere 7320R Tractor</h3>
-                        <p class="product-brand">John Deere</p>
-                        <div class="price-section">
-                            <span class="price">$84,500</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(124 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/boom-sprayer.png" alt="Pro Field Sprayer">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>CASE IH 3500 Boom Sprayer</h3>
-                        <p class="product-brand">CASE IH</p>
-                        <div class="price-section">
-                            <span class="price">$4,200</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(89 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/netafim.jpg" alt="Smart Irrigation Hub">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Netafim Pulse Drip Irrigation</h3>
-                        <p class="product-brand">Netafim</p>
-                        <div class="price-section">
-                            <span class="price">$850</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(156 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/soil-sensor.jpg" alt="AI Soil Analyzer">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Trimble Soil Sensor Kit</h3>
-                        <p class="product-brand">Trimble</p>
-                        <div class="price-section">
-                            <span class="price">$1,299</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(67 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/heavy-duty-tractor.jpg" alt="Heavy-Duty Tractor">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>New Holland T8.530 Tractor</h3>
-                        <p class="product-brand">New Holland</p>
-                        <div class="price-section">
-                            <span class="price">$70,000</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(203 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/mahindra.jpg" alt="Precision Seed Drill">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Mahindra Arjun 605 Tractor</h3>
-                        <p class="product-brand">Mahindra</p>
-                        <div class="price-section">
-                            <span class="price">$4,000</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(145 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/raven-crop.png" alt="Crop Health Monitor">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Raven CropWatch 4G Monitoring</h3>
-                        <p class="product-brand">Raven</p>
-                        <div class="price-section">
-                            <span class="price">$2,150</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(89 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/mini-tractor.jpg" alt="Mini Tractor">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Mini Tractor</h3>
-                        <p class="product-brand">CASE IH</p>
-                        <div class="price-section">
-                            <span class="price">$2,800</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(112 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/rotary-tiller.jpg" alt="Electric Rotary Tiller">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>John Deere 3PT Rotary Tiller</h3>
-                        <p class="product-brand">John Deere</p>
-                        <div class="price-section">
-                            <span class="price">$2,650</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(98 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/drone-sprayer.jpg" alt="Agricultural Drone Sprayer">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Agricultural Drone Sprayer</h3>
-                        <p class="product-brand">DJI Agras</p>
-                        <div class="price-section">
-                            <span class="price">$15,500</span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(176 reviews)</span>
-                        </div>
-                        <button class="btn-add-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/harvest-combine.jpg" alt="Mini Harvest Combine">
-                        <span class="badge new">New</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Mini Harvest Combine 200</h3>
+                        <h3>Kubota L3901 Compact Tractor</h3>
                         <p class="product-brand">Kubota</p>
                         <div class="price-section">
-                            <span class="price">$28,900</span>
+                            <span class="price">$18,400</span>
+                            <span class="original-price">$21,000</span>
                         </div>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(134 reviews)</span>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/hypro.png" alt="Pro Field Sprayer">
+                        <span class="badge sale">-25% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hypro Sprayer 5100C</h3>
+                        <p class="product-brand">Hypro</p>
+                        <div class="price-section">
+                            <span class="price">$3,150</span>
+                            <span class="original-price">$4,200</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/rain-bird.jpg" alt="Smart Irrigation Hub">
+                        <span class="badge sale">-30% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rain Bird Irrigation Controller</h3>
+                        <p class="product-brand">Rain Bird</p>
+                        <div class="price-section">
+                            <span class="price">$595</span>
+                            <span class="original-price">$850</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/ag-leader-soilmap-probe.png" alt="AI Soil Analyzer">
+                        <span class="badge sale">-35% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ag Leader SoilMap Probe</h3>
+                        <p class="product-brand">Ag Leader</p>
+                        <div class="price-section">
+                            <span class="price">$844</span>
+                            <span class="original-price">$1,299</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Massey-Ferguson.png" alt="Heavy-Duty Tractor">
+                        <span class="badge sale">-20% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Massey Ferguson MF 4708 Tractor</h3>
+                        <p class="product-brand">Massey Ferguson</p>
+                        <div class="price-section">
+                            <span class="price">$56,000</span>
+                            <span class="original-price">$70,000</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/swaraj-tractor.jpg" alt="Precision Seed Drill">
+                        <span class="badge sale">-40% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Swaraj 735 FE Tractor</h3>
+                        <p class="product-brand">Swaraj</p>
+                        <div class="price-section">
+                            <span class="price">$2,400</span>
+                            <span class="original-price">$4,000</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/topcon.jpg" alt="Crop Health Monitor">
+                        <span class="badge sale">-28% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Topcon AES Precision Guidance</h3>
+                        <p class="product-brand">Topcon</p>
+                        <div class="price-section">
+                            <span class="price">$1,548</span>
+                            <span class="original-price">$2,150</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/vicon.jpg" alt="Automated Fertilizer Spreader">
+                        <span class="badge sale">-22% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vicon Spreader VS300T</h3>
+                        <p class="product-brand">Vicon</p>
+                        <div class="price-section">
+                            <span class="price">$2,964</span>
+                            <span class="original-price">$3,800</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/agrifac-tractor.png" alt="Electric Rotary Tiller">
+                        <span class="badge sale">-32% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Agrifac Condor 12R Tiller</h3>
+                        <p class="product-brand">Agrifac</p>
+                        <div class="price-section">
+                            <span class="price">$1,802</span>
+                            <span class="original-price">$2,650</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/agricultural-drone.jpg" alt="Agricultural Drone Sprayer">
+                        <span class="badge sale">-18% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>XAG V50 Agricultural Drone</h3>
+                        <p class="product-brand">XAG</p>
+                        <div class="price-section">
+                            <span class="price">$12,710</span>
+                            <span class="original-price">$15,500</span>
+                        </div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/mini-harvester.png" alt="Mini Harvest Combine">
+                        <span class="badge sale">-15% OFF</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Yto-Layland Mini Harvester</h3>
+                        <p class="product-brand">YTO-Layland</p>
+                        <div class="price-section">
+                            <span class="price">$24,565</span>
+                            <span class="original-price">$28,900</span>
                         </div>
                         <button class="btn-add-cart">Add to Cart</button>
                     </div>

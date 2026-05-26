@@ -2,30 +2,34 @@
    FOOTER
    ============================================================================ */
 .footer {
-    background: #F5F5DC;
+    background: linear-gradient(135deg, var(--earth-light-tan) 0%, var(--bg-earth) 100%);
     color: var(--text-dark);
-    padding: 40px 0 20px;
-    margin-top: 40px;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+    border-top: 2px solid var(--primary-color);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
-    margin-bottom: 25px;
+    gap: 50px;
+    margin-bottom: 30px;
 }
 
 .footer-section h4 {
     font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 22px;
     color: var(--text-dark);
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 .footer-logo {
     display: flex;
     gap: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -38,8 +42,8 @@
 
 .footer-section p {
     font-size: 14px;
-    color: var(--text-dark);
-    margin-bottom: 20px;
+    color: var(--text-light);
+    margin-bottom: 24px;
     line-height: 1.8;
 }
 
@@ -48,23 +52,25 @@
 }
 
 .footer-section ul li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .footer-section a {
     color: var(--text-dark);
     font-size: 14px;
     transition: var(--transition);
+    font-weight: 500;
 }
 
 .footer-section a:hover {
     color: var(--primary-color);
+    padding-left: 4px;
 }
 
 .social-links {
     display: flex;
-    gap: 15px;
-    font-size: 20px;
+    gap: 12px;
+    font-size: 18px;
 }
 
 .social-links a {
@@ -73,10 +79,11 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #1F2937;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: white;
-    border-radius: 50%;
+    border-radius: 8px;
     transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2);
 }
 
 .social-links a:hover {

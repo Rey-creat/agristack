@@ -47,10 +47,10 @@
                     </div>
 
                     <div class="nav-icons">
-                        <div class="user-menu">
+                        <a href="login.html" class="user-menu">
                             <i class="fas fa-user"></i>
                             <span>Account</span>
-                        </div>
+                        </a>
                         <div class="cart-icon">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
@@ -59,34 +59,50 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Mega Menu Navigation -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            <i class="fas fa-th-large"></i> Categories
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
+                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
+                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
+                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Shop By Brand</h4>
+                                <ul>
+                                    <li><a href="brands.html?brand=john-deere">John Deere</a></li>
+                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
+                                    <li><a href="brands.html?brand=case">CASE</a></li>
+                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="brands.html" class="mega-menu-link">Brands</a>
+                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
+                    <a href="sale.html" class="mega-menu-link sale-link">Sale</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="nav-menu">
-            <div class="categories-dropdown-menu">
-                <button class="dropdown-link">
-                    Categories
-                </button>
-                <div class="dropdown-submenu">
-                    <a href="tractors.php" class="submenu-item">
-                        <i class=""></i> Tractors
-                    </a>
-                    <a href="sprayers.php" class="submenu-item">
-                        <i class=""></i> Sprayers
-                    </a>
-                    <a href="irrigation.php" class="submenu-item">
-                        <i class=""></i> Irrigation
-                    </a>
-                    <a href="tools.php" class="submenu-item">
-                        <i class=""></i> Tools & Parts
-                    </a>
-                </div>
-            </div>
-            <a href="brands.php" class="nav-link">Brands</a>
-            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
-            <a href="sale.php" class="nav-link sale">Sale</a>
-        </div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Modern Farming Solutions</h1>
@@ -181,7 +197,7 @@
                         <h3>Compact Utility Tractor 3025E</h3>
                         <div class="price-section">
                             <span class="price">$18,400</span>
-                            <span class="original-price">$21,000</span>
+                            <span class="original-price"></span>
                         </div>
                         <button class="btn-add-cart">Add to Cart</button>
                     </div>
@@ -274,7 +290,8 @@
                 <div class="filter-tabs">
                     <button class="tab active">Best Sellers</button>
                     <button class="tab">Trending</button>
-                    <button class="tab">Sale</button>
+                     <button class="tab">Sale</button>
+                   
                 </div>
             </div>
 

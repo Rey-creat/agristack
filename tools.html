@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irrigation - AgriStack</title>
+    <title>Tools & Parts - AgriStack</title>
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/brands.css">
     <link rel="stylesheet" href="css/categories.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/plp.css">
     <link rel="stylesheet" href="css/trust.css">
     <link rel="stylesheet" href="css/collections.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -38,7 +39,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <a href="index.php">
+                        <a href="index.html">
                             <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
                         </a>
                     </div>
@@ -49,10 +50,10 @@
                     </div>
 
                     <div class="nav-icons">
-                        <div class="user-menu">
+                        <a href="login.html" class="user-menu">
                             <i class="fas fa-user"></i>
                             <span>Account</span>
-                        </div>
+                        </a>
                         <div class="cart-icon">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
@@ -61,49 +62,178 @@
                 </div>
             </div>
         </nav>
-    </header>
 
-    <!-- Page Navigation -->
-    <section class="page-nav">
-        <div class="nav-menu">
-            <a href="index.php" class="nav-link home-link">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <div class="categories-dropdown-menu">
-                <button class="dropdown-link">
-                    Categories
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-submenu">
-                    <a href="tractors.php" class="submenu-item">Tractors</a>
-                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
-                    <a href="irrigation.php" class="submenu-item active">Irrigation</a>
-                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
+        <!-- Mega Menu Navigation -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            <i class="fas fa-th-large"></i> Categories
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
+                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
+                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
+                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Shop By Brand</h4>
+                                <ul>
+                                    <li><a href="brands.html?brand=john-deere">John Deere</a></li>
+                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
+                                    <li><a href="brands.html?brand=case">CASE</a></li>
+                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="brands.html" class="mega-menu-link">Brands</a>
+                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
+                    <a href="sale.html" class="mega-menu-link sale-link">
+                        <i class="fas fa-tag"></i> Sale
+                    </a>
                 </div>
             </div>
-            <a href="brands.php" class="nav-link">Brands</a>
-            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
-            <a href="sale.php" class="nav-link sale">Sale</a>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Irrigation Category Section -->
+    <!-- Tools & Parts Category Section -->
     <section class="category-page">
         <div class="container">
             <div class="category-header">
-                <h1><i class="fas fa-droplet"></i> Irrigation</h1>
-                <p>Advanced irrigation solutions for efficient water management</p>
+                <h1><i class="fas fa-wrench"></i> Tools & Parts</h1>
+                <p>Complete range of agricultural tools and replacement parts</p>
             </div>
 
             <div class="products-grid">
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/SmartIHv2.jpg" alt="Smart Irrigation Hub V2">
+                            <img src="images/rotary-tiller.jpg" alt="Heavy Duty Rotary Tiller">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
-                            <h3>Smart Irrigation Hub V2</h3>
+                            <h3>Heavy Duty Rotary Tiller</h3>
+                            <p class="product-brand">John Deere</p>
+                            <div class="price-section">
+                                <span class="price">$2,100</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/PreSD.jpg" alt="Precision Seed Drill">
+                        </div>
+                        <div class="product-info">
+                            <h3>Precision Seed Drill</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$1,800</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/PreSDPro.jpg" alt="Precision Seed Drill Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Precision Seed Drill Pro</h3>
+                            <p class="product-brand">Mahindra</p>
+                            <div class="price-section">
+                                <span class="price">$2,400</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/UToolSet.jpg" alt="Universal Parts Kit">
+                        </div>
+                        <div class="product-info">
+                            <h3>Universal Parts Kit</h3>
+                            <p class="product-brand">CASE IH</p>
+                            <div class="price-section">
+                                <span class="price">$1,200</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/ProToolSet.jpg" alt="Professional Tool Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Professional Tool Set</h3>
+                            <p class="product-brand">New Holland</p>
+                            <div class="price-section">
+                                <span class="price">$950</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/MaintKit.jpg" alt="Complete Maintenance Kit">
+                        </div>
+                        <div class="product-info">
+                            <h3>Complete Maintenance Kit</h3>
+                            <p class="product-brand">Mahindra</p>
+                            <div class="price-section">
+                                <span class="price">$1,550</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/BReplacement.jpg" alt="Blade Replacement System">
+                        </div>
+                        <div class="product-info">
+                            <h3>Blade Replacement System</h3>
+                            <p class="product-brand">John Deere</p>
+                            <div class="price-section">
+                                <span class="price">$1,700</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/HTParts.jpg" alt="Hydraulic Component Pack">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hydraulic Component Pack</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$2,100</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/S&G.jpg" alt="Sensor & Gauge Bundle">
+                        </div>
+                        <div class="product-info">
+                            <h3>Sensor & Gauge Bundle</h3>
                             <p class="product-brand">AgriTech</p>
                             <div class="price-section">
                                 <span class="price">$850</span>
@@ -114,81 +244,11 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/PreIS.jpg" alt="Precision Irrigation System">
+                            <img src="images/Belt.jpg" alt="Belt Drive Assembly">
                         </div>
                         <div class="product-info">
-                            <h3>Precision Irrigation System</h3>
-                            <p class="product-brand">Kubota</p>
-                            <div class="price-section">
-                                <span class="price">$1,200</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/AutoIS.jpg" alt="Automated Irrigation Manager">
-                        </div>
-                        <div class="product-info">
-                            <h3>Automated Irrigation Manager</h3>
-                            <p class="product-brand">John Deere</p>
-                            <div class="price-section">
-                                <span class="price">$1,500</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/WaterEffI.jpg" alt="Water Efficiency Controller">
-                        </div>
-                        <div class="product-info">
-                            <h3>Water Efficiency Controller</h3>
+                            <h3>Belt Drive Assembly</h3>
                             <p class="product-brand">CASE IH</p>
-                            <div class="price-section">
-                                <span class="price">$950</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/DripIM.jpg" alt="Drip Irrigation Master">
-                        </div>
-                        <div class="product-info">
-                            <h3>Drip Irrigation Master</h3>
-                            <p class="product-brand">Mahindra</p>
-                            <div class="price-section">
-                                <span class="price">$1,800</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/SmartWPump.jpg" alt="Smart Water Pump System">
-                        </div>
-                        <div class="product-info">
-                            <h3>Smart Water Pump System</h3>
-                            <p class="product-brand">New Holland</p>
-                            <div class="price-section">
-                                <span class="price">$2,100</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/MicroSprinkler.jpg" alt="Micro-Sprinkler Solution">
-                        </div>
-                        <div class="product-info">
-                            <h3>Micro-Sprinkler Solution</h3>
-                            <p class="product-brand">John Deere</p>
                             <div class="price-section">
                                 <span class="price">$1,350</span>
                             </div>
@@ -198,55 +258,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/IoTES.png" alt="IoT-Enabled Irrigation">
+                            <img src="images/EngineOH.jpg" alt="Engine Overhaul Kit">
                         </div>
                         <div class="product-info">
-                            <h3>IoT-Enabled Irrigation</h3>
-                            <p class="product-brand">AgriTech</p>
-                            <div class="price-section">
-                                <span class="price">$2,450</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/SubPumpC.jpg" alt="Submerged Pump Controller">
-                        </div>
-                        <div class="product-info">
-                            <h3>Submerged Pump Controller</h3>
-                            <p class="product-brand">Kubota</p>
-                            <div class="price-section">
-                                <span class="price">$1,600</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/PivotIS.jpg" alt="Pivot Irrigation System">
-                        </div>
-                        <div class="product-info">
-                            <h3>Pivot Irrigation System</h3>
-                            <p class="product-brand">CASE IH</p>
-                            <div class="price-section">
-                                <span class="price">$3,200</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/SolarIS.jpg" alt="Solar-Powered Water Pump">
-                        </div>
-                        <div class="product-info">
-                            <h3>Solar-Powered Water Pump</h3>
+                            <h3>Engine Overhaul Kit</h3>
                             <p class="product-brand">Mahindra</p>
                             <div class="price-section">
-                                <span class="price">$2,800</span>
+                                <span class="price">$2,650</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -322,6 +340,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/plp.js"></script>
     <script>
         // Categories dropdown in page navigation
         const pageNavBtn = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-link');

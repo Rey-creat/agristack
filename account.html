@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - AgriStack</title>
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    
+    <!-- Account Page Styles -->
+    <link rel="stylesheet" href="css/account.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Check if user is logged in
+        window.addEventListener('load', function() {
+            const isLoggedIn = localStorage.getItem('is_logged_in');
+            if (!isLoggedIn) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Account Container -->
+    <div class="account-wrapper">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Sidebar Navigation -->
+        <aside class="account-sidebar">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-avatar">
+                    <img src="images/avatar.png" alt="User Avatar" class="avatar-image">
+                </div>
+                <div class="profile-info">
+                    <h3 class="profile-name" id="user-display-name">John Doe</h3>
+                    <p class="profile-email" id="user-display-email">john.doe@agristack.com</p>
+                    <a href="#" class="edit-profile-link">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#orders" class="nav-link" data-section="orders">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>My Orders</span>
+                </a>
+                <a href="#wishlist" class="nav-link" data-section="wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="#rfqs" class="nav-link" data-section="rfqs">
+                    <i class="fas fa-file-alt"></i>
+                    <span>RFQs</span>
+                </a>
+                <a href="#financing" class="nav-link" data-section="financing">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Financing</span>
+                </a>
+                <a href="#tickets" class="nav-link" data-section="tickets">
+                    <i class="fas fa-headset"></i>
+                    <span>Service Tickets</span>
+                </a>
+                <a href="#addresses" class="nav-link" data-section="addresses">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Addresses</span>
+                </a>
+                <a href="#settings" class="nav-link" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <hr class="nav-divider">
+                <a href="#" class="nav-link logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="account-main">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                    <p class="section-subtitle">Welcome back! Here's your account overview.</p>
+                </div>
+
+                <!-- Overview Cards -->
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon orders">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-label">Total Orders</p>
+                            <h3 class="card-value">24</h3>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon rfqs">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-label">Active RFQs</p>
+                            <h3 class="card-value">3</h3>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-label">Wishlist Items</p>
+                            <h3 class="card-value">12</h3>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon tickets">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-label">Service Requests</p>
+                            <h3 class="card-value">2</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="recent-section">
+                    <div class="section-title">
+                        <h2>Recent Orders</h2>
+                        <a href="#orders" class="view-all-link">View All</a>
+                    </div>
+
+                    <div class="orders-container">
+                        <div class="order-item">
+                            <div class="order-image">
+                                <img src="images/product-1.jpg" alt="Tractor">
+                            </div>
+                            <div class="order-details">
+                                <h4>Agricultural Tractor - Model X2000</h4>
+                                <p class="order-id">Order ID: #ORD-2024-001</p>
+                                <div class="order-meta">
+                                    <span class="status-badge delivered">
+                                        <i class="fas fa-check-circle"></i> Delivered
+                                    </span>
+                                    <span class="delivery-date">
+                                        <i class="fas fa-calendar"></i> May 20, 2024
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-image">
+                                <img src="images/product-2.jpg" alt="Sprayer">
+                            </div>
+                            <div class="order-details">
+                                <h4>Digital Crop Sprayer System</h4>
+                                <p class="order-id">Order ID: #ORD-2024-002</p>
+                                <div class="order-meta">
+                                    <span class="status-badge shipped">
+                                        <i class="fas fa-truck"></i> Shipped
+                                    </span>
+                                    <span class="delivery-date">
+                                        <i class="fas fa-calendar"></i> Expected May 28, 2024
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline">Track Order</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-image">
+                                <img src="images/product-3.jpg" alt="Tools">
+                            </div>
+                            <div class="order-details">
+                                <h4>Premium Farming Tools Bundle</h4>
+                                <p class="order-id">Order ID: #ORD-2024-003</p>
+                                <div class="order-meta">
+                                    <span class="status-badge processing">
+                                        <i class="fas fa-hourglass-half"></i> Processing
+                                    </span>
+                                    <span class="delivery-date">
+                                        <i class="fas fa-calendar"></i> Ships May 27, 2024
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="orders" class="content-section">
+                <div class="section-header">
+                    <h1>My Orders</h1>
+                    <p class="section-subtitle">Manage and track your purchases</p>
+                </div>
+
+                <div class="filter-bar">
+                    <select class="filter-select">
+                        <option>All Orders</option>
+                        <option>Processing</option>
+                        <option>Shipped</option>
+                        <option>Delivered</option>
+                        <option>Returned</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search orders...">
+                </div>
+
+                <div class="orders-list">
+                    <div class="order-card">
+                        <div class="order-card-header">
+                            <h3>Agricultural Tractor - Model X2000</h3>
+                            <span class="order-date">May 20, 2024</span>
+                        </div>
+                        <div class="order-card-body">
+                            <p><strong>Order ID:</strong> #ORD-2024-001</p>
+                            <p><strong>Total:</strong> $25,000.00</p>
+                            <p><strong>Status:</strong> <span class="status-badge delivered"><i class="fas fa-check-circle"></i> Delivered</span></p>
+                        </div>
+                        <div class="order-card-footer">
+                            <button class="btn btn-primary">View Details</button>
+                            <button class="btn btn-outline">Reorder</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-card-header">
+                            <h3>Digital Crop Sprayer System</h3>
+                            <span class="order-date">May 22, 2024</span>
+                        </div>
+                        <div class="order-card-body">
+                            <p><strong>Order ID:</strong> #ORD-2024-002</p>
+                            <p><strong>Total:</strong> $8,500.00</p>
+                            <p><strong>Status:</strong> <span class="status-badge shipped"><i class="fas fa-truck"></i> Shipped</span></p>
+                        </div>
+                        <div class="order-card-footer">
+                            <button class="btn btn-primary">Track Order</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wishlist Section -->
+            <section id="wishlist" class="content-section">
+                <div class="section-header">
+                    <h1>My Wishlist</h1>
+                    <p class="section-subtitle">Save your favorite equipment for later</p>
+                </div>
+
+                <div class="wishlist-grid">
+                    <div class="wishlist-card">
+                        <div class="wishlist-image">
+                            <img src="images/product-1.jpg" alt="Premium Tractor">
+                            <button class="wishlist-remove" title="Remove from wishlist">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-info">
+                            <h4>Premium Agricultural Tractor</h4>
+                            <p class="product-sku">Model: X3000</p>
+                            <p class="product-price">$32,500.00</p>
+                            <button class="btn btn-primary btn-block">Move to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <div class="wishlist-image">
+                            <img src="images/product-2.jpg" alt="Sprayer System">
+                            <button class="wishlist-remove" title="Remove from wishlist">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-info">
+                            <h4>Advanced Sprayer System</h4>
+                            <p class="product-sku">Model: SP-500</p>
+                            <p class="product-price">$12,000.00</p>
+                            <button class="btn btn-primary btn-block">Move to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <div class="wishlist-image">
+                            <img src="images/product-3.jpg" alt="Tool Set">
+                            <button class="wishlist-remove" title="Remove from wishlist">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-info">
+                            <h4>Professional Farming Tools</h4>
+                            <p class="product-sku">Bundle: 25 Pieces</p>
+                            <p class="product-price">$3,500.00</p>
+                            <button class="btn btn-primary btn-block">Move to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RFQs Section -->
+            <section id="rfqs" class="content-section">
+                <div class="section-header">
+                    <h1>Request for Quotation</h1>
+                    <p class="section-subtitle">Manage your RFQs and supplier quotes</p>
+                    <button class="btn btn-primary" id="createRfqBtn">
+                        <i class="fas fa-plus"></i> Create New RFQ
+                    </button>
+                </div>
+
+                <div class="rfqs-list">
+                    <div class="rfq-card">
+                        <div class="rfq-header">
+                            <h3>Bulk Order: High-Capacity Irrigation System</h3>
+                            <span class="status-badge rfq-responded">
+                                <i class="fas fa-check"></i> Quote Received
+                            </span>
+                        </div>
+                        <div class="rfq-body">
+                            <p><strong>Request Date:</strong> May 15, 2024</p>
+                            <p><strong>Quantity:</strong> 50 units</p>
+                            <p><strong>Deadline:</strong> May 30, 2024</p>
+                        </div>
+                        <div class="rfq-footer">
+                            <button class="btn btn-primary">View Quote</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="rfq-card">
+                        <div class="rfq-header">
+                            <h3>Agricultural Drone System - 20 Units</h3>
+                            <span class="status-badge rfq-pending">
+                                <i class="fas fa-clock"></i> Pending
+                            </span>
+                        </div>
+                        <div class="rfq-body">
+                            <p><strong>Request Date:</strong> May 18, 2024</p>
+                            <p><strong>Quantity:</strong> 20 units</p>
+                            <p><strong>Deadline:</strong> June 5, 2024</p>
+                        </div>
+                        <div class="rfq-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-outline">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Financing Section -->
+            <section id="financing" class="content-section">
+                <div class="section-header">
+                    <h1>Financing Applications</h1>
+                    <p class="section-subtitle">Manage your financing options and applications</p>
+                    <button class="btn btn-primary" id="applyFinancingBtn">
+                        <i class="fas fa-plus"></i> Apply for Financing
+                    </button>
+                </div>
+
+                <div class="financing-list">
+                    <div class="financing-card">
+                        <div class="financing-header">
+                            <h3>Equipment Financing - Tractor X2000</h3>
+                            <span class="status-badge financing-approved">
+                                <i class="fas fa-check-circle"></i> Approved
+                            </span>
+                        </div>
+                        <div class="financing-body">
+                            <div class="financing-detail">
+                                <span>Loan Amount:</span>
+                                <strong>$25,000.00</strong>
+                            </div>
+                            <div class="financing-detail">
+                                <span>Interest Rate:</span>
+                                <strong>6.5%</strong>
+                            </div>
+                            <div class="financing-detail">
+                                <span>Term:</span>
+                                <strong>60 months</strong>
+                            </div>
+                            <div class="financing-detail">
+                                <span>Monthly Payment:</span>
+                                <strong>$483.32</strong>
+                            </div>
+                        </div>
+                        <div class="financing-footer">
+                            <button class="btn btn-primary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="financing-card">
+                        <div class="financing-header">
+                            <h3>Line of Credit Application</h3>
+                            <span class="status-badge financing-pending">
+                                <i class="fas fa-hourglass"></i> Under Review
+                            </span>
+                        </div>
+                        <div class="financing-body">
+                            <div class="financing-detail">
+                                <span>Applied Amount:</span>
+                                <strong>$50,000.00</strong>
+                            </div>
+                            <div class="financing-detail">
+                                <span>Application Date:</span>
+                                <strong>May 20, 2024</strong>
+                            </div>
+                            <div class="financing-detail">
+                                <span>Status:</span>
+                                <strong>Under Review</strong>
+                            </div>
+                        </div>
+                        <div class="financing-footer">
+                            <button class="btn btn-outline">View Application</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Tickets Section -->
+            <section id="tickets" class="content-section">
+                <div class="section-header">
+                    <h1>Service Tickets</h1>
+                    <p class="section-subtitle">Track and manage your support requests</p>
+                    <button class="btn btn-primary" id="createTicketBtn">
+                        <i class="fas fa-plus"></i> Create Ticket
+                    </button>
+                </div>
+
+                <div class="tickets-list">
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div>
+                                <h3>Tractor Engine Performance Issue</h3>
+                                <p class="ticket-id">#TKT-2024-001</p>
+                            </div>
+                            <span class="status-badge ticket-in-progress">
+                                <i class="fas fa-spinner"></i> In Progress
+                            </span>
+                        </div>
+                        <div class="ticket-body">
+                            <p><strong>Equipment:</strong> Agricultural Tractor X2000</p>
+                            <p><strong>Issue Type:</strong> Performance / Maintenance</p>
+                            <p><strong>Created:</strong> May 15, 2024</p>
+                            <p class="ticket-description">Engine is not reaching optimal RPM. Possible fuel injection issue.</p>
+                        </div>
+                        <div class="ticket-footer">
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div>
+                                <h3>Sprayer System Calibration Help</h3>
+                                <p class="ticket-id">#TKT-2024-002</p>
+                            </div>
+                            <span class="status-badge ticket-resolved">
+                                <i class="fas fa-check-circle"></i> Resolved
+                            </span>
+                        </div>
+                        <div class="ticket-body">
+                            <p><strong>Equipment:</strong> Digital Crop Sprayer SP-500</p>
+                            <p><strong>Issue Type:</strong> Technical Support</p>
+                            <p><strong>Created:</strong> May 10, 2024</p>
+                            <p class="ticket-description">Need assistance with recalibrating sprayer nozzles.</p>
+                        </div>
+                        <div class="ticket-footer">
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Addresses Section -->
+            <section id="addresses" class="content-section">
+                <div class="section-header">
+                    <h1>My Addresses</h1>
+                    <p class="section-subtitle">Manage delivery addresses</p>
+                    <button class="btn btn-primary" id="addAddressBtn">
+                        <i class="fas fa-plus"></i> Add New Address
+                    </button>
+                </div>
+
+                <div class="addresses-grid">
+                    <div class="address-card">
+                        <div class="address-header">
+                            <h3>Home Farm</h3>
+                            <span class="address-default">Default</span>
+                        </div>
+                        <div class="address-body">
+                            <p>123 Farm Lane</p>
+                            <p>Countryside, ST 12345</p>
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                        </div>
+                        <div class="address-footer">
+                            <button class="btn btn-outline btn-sm">Edit</button>
+                            <button class="btn btn-outline btn-sm">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-header">
+                            <h3>Branch Office</h3>
+                        </div>
+                        <div class="address-body">
+                            <p>456 Agricultural Park</p>
+                            <p>City, ST 67890</p>
+                            <p><strong>Phone:</strong> (555) 987-6543</p>
+                        </div>
+                        <div class="address-footer">
+                            <button class="btn btn-outline btn-sm">Edit</button>
+                            <button class="btn btn-outline btn-sm">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h1>Account Settings</h1>
+                    <p class="section-subtitle">Manage your account preferences</p>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="settings-card">
+                    <h2 class="settings-title">
+                        <i class="fas fa-user"></i> Personal Information
+                    </h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="John Doe" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" value="john.doe@agristack.com" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" value="(555) 123-4567" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-outline">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Change Password -->
+                <div class="settings-card">
+                    <h2 class="settings-title">
+                        <i class="fas fa-lock"></i> Change Password
+                    </h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <input type="password" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm New Password</label>
+                            <input type="password" placeholder="Confirm new password">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Update Password</button>
+                            <button type="button" class="btn btn-outline">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Notification Preferences -->
+                <div class="settings-card">
+                    <h2 class="settings-title">
+                        <i class="fas fa-bell"></i> Notification Preferences
+                    </h2>
+                    <div class="notification-settings">
+                        <div class="notification-item">
+                            <div class="notification-info">
+                                <h4>Order Updates</h4>
+                                <p>Get notified about order status changes</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="notification-info">
+                                <h4>RFQ Responses</h4>
+                                <p>Get notified when suppliers respond to RFQs</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="notification-info">
+                                <h4>Promotional Emails</h4>
+                                <p>Receive special offers and promotions</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="notification-info">
+                                <h4>Email Notifications</h4>
+                                <p>Receive updates via email</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-primary">Save Preferences</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast-message" id="toastMessage"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/account.js"></script>
+    
+    <script>
+        // Display user info from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const userName = localStorage.getItem('user_name') || 'User';
+            const userEmail = localStorage.getItem('user_email') || 'user@example.com';
+            
+            // Update profile display
+            document.getElementById('user-display-name').textContent = userName;
+            document.getElementById('user-display-email').textContent = userEmail;
+        });
+        
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('is_logged_in');
+            localStorage.removeItem('user_email');
+            localStorage.removeItem('user_name');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

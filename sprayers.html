@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tractors - AgriStack</title>
+    <title>Sprayers - AgriStack</title>
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/brands.css">
     <link rel="stylesheet" href="css/categories.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/plp.css">
     <link rel="stylesheet" href="css/trust.css">
     <link rel="stylesheet" href="css/collections.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -38,7 +39,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <a href="index.php">
+                        <a href="index.html">
                             <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
                         </a>
                     </div>
@@ -49,10 +50,10 @@
                     </div>
 
                     <div class="nav-icons">
-                        <div class="user-menu">
+                        <a href="login.html" class="user-menu">
                             <i class="fas fa-user"></i>
                             <span>Account</span>
-                        </div>
+                        </a>
                         <div class="cart-icon">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
@@ -61,80 +62,69 @@
                 </div>
             </div>
         </nav>
-    </header>
 
-    <!-- Page Navigation -->
-    <section class="page-nav">
-        <div class="nav-menu">
-            <a href="index.php" class="nav-link home-link">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <div class="categories-dropdown-menu">
-                <button class="dropdown-link">
-                    Categories
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-submenu">
-                    <a href="tractors.php" class="submenu-item active">Tractors</a>
-                    <a href="sprayers.php" class="submenu-item">Sprayers</a>
-                    <a href="irrigation.php" class="submenu-item">Irrigation</a>
-                    <a href="tools.php" class="submenu-item">Tools & Parts</a>
+        <!-- Mega Menu Navigation -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            <i class="fas fa-th-large"></i> Categories
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
+                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
+                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
+                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Shop By Brand</h4>
+                                <ul>
+                                    <li><a href="brands.html?brand=john-deere">John Deere</a></li>
+                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
+                                    <li><a href="brands.html?brand=case">CASE</a></li>
+                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="brands.html" class="mega-menu-link">Brands</a>
+                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
+                    <a href="sale.html" class="mega-menu-link sale-link">
+                        <i class="fas fa-tag"></i> Sale
+                    </a>
                 </div>
             </div>
-            <a href="brands.php" class="nav-link">Brands</a>
-            <a href="new-arrivals.php" class="nav-link">New Arrivals</a>
-            <a href="sale.php" class="nav-link sale">Sale</a>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Tractors Category Section -->
+    <!-- Sprayers Category Section -->
     <section class="category-page">
         <div class="container">
             <div class="category-header">
-                <h1><i class="fas fa-tractor"></i> Tractors</h1>
-                <p>Premium tractors from the world's leading manufacturers</p>
+                <h1><i class="fas fa-spray-can"></i> Sprayers</h1>
+                <p>Professional crop spraying equipment for precision farming</p>
             </div>
 
             <div class="products-grid">
                     <!-- Product placeholders - Images to be added -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/CUTractor.png" alt="Compact Utility Tractor">
+                            <img src="images/PFS2000.jpg" alt="Pro Field Sprayer 2000">
                             <span class="badge">Featured</span>
                         </div>
                         <div class="product-info">
-                            <h3>Compact Utility Tractor</h3>
-                            <p class="product-brand">John Deere</p>
-                            <div class="price-section">
-                                <span class="price">$18,400</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/PUTractor.jpg" alt="Premium Utility Tractor">
-                        </div>
-                        <div class="product-info">
-                            <h3>Premium Utility Tractor</h3>
-                            <p class="product-brand">Kubota</p>
-                            <div class="price-section">
-                                <span class="price">$52,900</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/RCTractor.jpg" alt="Row Crop Tractor">
-                        </div>
-                        <div class="product-info">
-                            <h3>Row Crop Tractor</h3>
+                            <h3>Pro Field Sprayer 2000</h3>
                             <p class="product-brand">CASE IH</p>
                             <div class="price-section">
-                                <span class="price">$67,300</span>
+                                <span class="price">$4,200</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -142,13 +132,41 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/6RFSTractor.jpg" alt="Flagship Tractor">
+                            <img src="images/PreFS.jpg" alt="Precision Field Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Flagship Tractor</h3>
+                            <h3>Precision Field Sprayer</h3>
+                            <p class="product-brand">John Deere</p>
+                            <div class="price-section">
+                                <span class="price">$5,500</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/CCareS.jpg" alt="Crop Care Sprayer">
+                        </div>
+                        <div class="product-info">
+                            <h3>Crop Care Sprayer</h3>
+                            <p class="product-brand">Kubota</p>
+                            <div class="price-section">
+                                <span class="price">$3,800</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/ASS.jpg" alt="Advanced Spraying System">
+                        </div>
+                        <div class="product-info">
+                            <h3>Advanced Spraying System</h3>
                             <p class="product-brand">Mahindra</p>
                             <div class="price-section">
-                                <span class="price">$61,200</span>
+                                <span class="price">$4,900</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -156,13 +174,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/HDTractor.jpg" alt="Heavy-Duty Farm Tractor">
+                            <img src="images/EBoomS.jpg" alt="Efficient Boom Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Heavy-Duty Farm Tractor</h3>
+                            <h3>Efficient Boom Sprayer</h3>
                             <p class="product-brand">New Holland</p>
                             <div class="price-section">
-                                <span class="price">$75,500</span>
+                                <span class="price">$3,200</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -170,13 +188,27 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/MSTractor.jpg" alt="Mid-Size Agricultural Tractor">
+                            <img src="images/UPreS.jpg" alt="Ultra-Precision Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Mid-Size Agricultural Tractor</h3>
+                            <h3>Ultra-Precision Sprayer</h3>
+                            <p class="product-brand">AgriTech</p>
+                            <div class="price-section">
+                                <span class="price">$6,200</span>
+                            </div>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/WFrameS.jpg" alt="Wide-Frame Field Sprayer">
+                        </div>
+                        <div class="product-info">
+                            <h3>Wide-Frame Field Sprayer</h3>
                             <p class="product-brand">John Deere</p>
                             <div class="price-section">
-                                <span class="price">$42,800</span>
+                                <span class="price">$7,800</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -184,13 +216,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/CGTractor.jpg" alt="Compact Garden Tractor">
+                            <img src="images/CSpotS.jpg" alt="Compact Spot Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Compact Garden Tractor</h3>
+                            <h3>Compact Spot Sprayer</h3>
                             <p class="product-brand">Kubota</p>
                             <div class="price-section">
-                                <span class="price">$28,900</span>
+                                <span class="price">$2,450</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -198,13 +230,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/9rPPTractor.jpg" alt="Precision Power Tractor">
+                            <img src="images/TCapS.jpg" alt="Tank Capacity Sprayer Pro">
                         </div>
                         <div class="product-info">
-                            <h3>Precision Power Tractor</h3>
+                            <h3>Tank Capacity Sprayer Pro</h3>
                             <p class="product-brand">CASE IH</p>
                             <div class="price-section">
-                                <span class="price">$58,600</span>
+                                <span class="price">$5,100</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -212,13 +244,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/ProSTractor.jpg" alt="Professional Series Tractor">
+                            <img src="images/G&FS.jpg" alt="Garden & Farm Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Professional Series Tractor</h3>
+                            <h3>Garden & Farm Sprayer</h3>
                             <p class="product-brand">Mahindra</p>
                             <div class="price-section">
-                                <span class="price">$48,900</span>
+                                <span class="price">$3,600</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -226,27 +258,13 @@
 
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/tractor-product-10.jpg" alt="Smart Connected Tractor">
+                            <img src="images/CResS.jpg" alt="Chemical Resistant Sprayer">
                         </div>
                         <div class="product-info">
-                            <h3>Smart Connected Tractor</h3>
-                            <p class="product-brand">Kubota</p>
+                            <h3>Chemical Resistant Sprayer</h3>
+                            <p class="product-brand">New Holland</p>
                             <div class="price-section">
-                                <span class="price">$65,400</span>
-                            </div>
-                            <button class="btn-add-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/EFSTractor.jpg" alt="EcoFarm Tractor Series">
-                        </div>
-                        <div class="product-info">
-                            <h3>EcoFarm Tractor Series</h3>
-                            <p class="product-brand">John Deere</p>
-                            <div class="price-section">
-                                <span class="price">$52,100</span>
+                                <span class="price">$4,350</span>
                             </div>
                             <button class="btn-add-cart">Add to Cart</button>
                         </div>
@@ -322,6 +340,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/plp.js"></script>
     <script>
         // Categories dropdown in page navigation
         const pageNavBtn = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-link');

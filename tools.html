@@ -86,7 +86,7 @@
                             <div class="mega-menu-column">
                                 <h4>Shop By Brand</h4>
                                 <ul>
-                                    <li><a href="brands.html?brand=john-deere">John Deere</a></li>
+                                    <li><a href="john-deere.html">John Deere</a></li>
                                     <li><a href="brands.html?brand=kubota">Kubota</a></li>
                                     <li><a href="brands.html?brand=case">CASE</a></li>
                                     <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
@@ -126,7 +126,7 @@
                             <div class="price-section">
                                 <span class="price">$2,100</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/rotary-tiller.jpg&title=Heavy%20Duty%20Rotary%20Tiller" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -140,7 +140,7 @@
                             <div class="price-section">
                                 <span class="price">$1,800</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/PreSD.jpg&title=Precision%20Seed%20Drill" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -154,7 +154,7 @@
                             <div class="price-section">
                                 <span class="price">$2,400</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/PreSDPro.jpg&title=Precision%20Seed%20Drill%20Pro" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -168,7 +168,7 @@
                             <div class="price-section">
                                 <span class="price">$1,200</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/UToolSet.jpg&title=Universal%20Parts%20Kit" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -182,7 +182,7 @@
                             <div class="price-section">
                                 <span class="price">$950</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/ProToolSet.jpg&title=Professional%20Tool%20Set" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -196,7 +196,7 @@
                             <div class="price-section">
                                 <span class="price">$1,550</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/MaintKit.jpg&title=Complete%20Maintenance%20Kit" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -210,7 +210,7 @@
                             <div class="price-section">
                                 <span class="price">$1,700</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/BReplacement.jpg&title=Blade%20Replacement%20System" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -224,7 +224,7 @@
                             <div class="price-section">
                                 <span class="price">$2,100</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/HTParts.jpg&title=Hydraulic%20Component%20Pack" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -238,7 +238,7 @@
                             <div class="price-section">
                                 <span class="price">$850</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/S%26G.jpg&title=Sensor%20%26%20Gauge%20Bundle" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -252,7 +252,7 @@
                             <div class="price-section">
                                 <span class="price">$1,350</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/Belt.jpg&title=Belt%20Drive%20Assembly" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
 
@@ -266,7 +266,7 @@
                             <div class="price-section">
                                 <span class="price">$2,650</span>
                             </div>
-                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="product-detail.html?img=images/EngineOH.jpg&title=Engine%20Overhaul%20Kit" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
             </div>
@@ -363,6 +363,39 @@
                 }
             });
         }
+    </script>
+    <script>
+        // Make image and View Details clicks open PDP with the exact image
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.btn-view-details').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.product-card');
+                    const imgEl = card ? card.querySelector('.product-image img') : null;
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    const src = imgEl ? imgEl.getAttribute('src') : null;
+                    const title = titleEl ? titleEl.textContent.trim() : '';
+
+                    if (src) {
+                        const url = `product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                        window.location.href = url;
+                    } else {
+                        window.location.href = this.href;
+                    }
+                });
+            });
+
+            document.querySelectorAll('.product-image img').forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    const card = this.closest('.product-card');
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    const title = titleEl ? titleEl.textContent.trim() : '';
+                    const url = `product-detail.html?img=${encodeURIComponent(this.getAttribute('src'))}&title=${encodeURIComponent(title)}`;
+                    window.location.href = url;
+                });
+            });
+        });
     </script>
 </body>
 </html>

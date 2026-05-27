@@ -143,37 +143,49 @@ function initCartFunctionality() {
    ADD TO CART BUTTONS
    ============================================================================ */
 function initAddToCart() {
-    const addToCartBtns = document.querySelectorAll('.btn-add-cart');
+    // Support both legacy and PDP button classes
+    const addToCartBtns = document.querySelectorAll('.btn-add-cart, .btn-add-to-cart');
 
     addToCartBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
+            // Try to find product context; fall back to PDP selectors
             const product = this.closest('.product-card') || this.closest('.collection-card');
-            const productName = product.querySelector('h3').textContent;
-            const price = product.querySelector('.price').textContent;
-            
-            // Add to cart
-            window.cart.push({
-                name: productName,
-                price: price
-            });
-            
-            // Update cart count
-            window.cartCount.textContent = window.cart.length;
-            
-            // Show feedback
+            let productName = '';
+            let price = '';
+
+            if (product) {
+                const nameEl = product.querySelector('h3');
+                const priceEl = product.querySelector('.price');
+                productName = nameEl ? nameEl.textContent.trim() : '';
+                price = priceEl ? priceEl.textContent.trim() : '';
+            } else {
+                // PDP or other pages
+                const pdpName = document.querySelector('.product-header h1');
+                const pdpPrice = document.querySelector('.price-section-pdp .price');
+                productName = pdpName ? pdpName.textContent.trim() : 'Product';
+                price = pdpPrice ? pdpPrice.textContent.trim() : '';
+            }
+
+            // Add to cart data structure
+            window.cart.push({ name: productName, price: price });
+
+            // Update cart count UI if present
+            if (window.cartCount) window.cartCount.textContent = window.cart.length;
+
+            // Provide feedback on the button
             const originalText = this.textContent;
             this.textContent = '✓ Added to Cart';
-            this.style.background = '#22c55e';
-            
+            this.classList.add('added-to-cart');
+
             setTimeout(() => {
                 this.textContent = originalText;
-                this.style.background = '';
+                this.classList.remove('added-to-cart');
             }, 2000);
 
-            // Log to console
-            console.log('Item added to cart:', productName);
+            // Log to console for debugging
+            console.log('Item added to cart:', productName, price);
         });
     });
 }
@@ -342,7 +354,9 @@ function renderCollectionCards(products) {
         
         const badgeHTML = product.badge ? `<span class="sale-badge">${product.badge}</span>` : '';
         const originalPriceHTML = product.originalPrice ? `<p class="original-price">${product.originalPrice}</p>` : '';
-        
+        const imgParam = encodeURIComponent(product.image);
+        const titleParam = encodeURIComponent(product.title);
+
         card.innerHTML = `
             <div class="collection-image">
                 <img src="${product.image}" alt="${product.title}">
@@ -353,7 +367,7 @@ function renderCollectionCards(products) {
                 <p class="price">${product.price}</p>
                 ${originalPriceHTML}
             </div>
-            <button class="btn-add-cart">Add to Cart</button>
+            <a href="product-detail.html?img=${imgParam}&title=${titleParam}" class="btn btn-primary btn-view-details">View Details</a>
         `;
         
         collectionGrid.appendChild(card);
@@ -376,8 +390,7 @@ function renderCollectionCards(products) {
         });
     });
     
-    // Re-attach add to cart functionality
-    initAddToCart();
+    // No add-to-cart attached for collection cards (they link to PDP now)
 }
 
 function initTabFiltering() {

@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sale - AgriStack</title>
     
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="css/global.css">
+    <!-- Global Styles (relative from collections/ folder) -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/trust.css">
+    <link rel="stylesheet" href="../css/collections.css">
+    <link rel="stylesheet" href="../css/footer.css">
     
-    <!-- Component Styles -->
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/categories.css">
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/trust.css">
-    <link rel="stylesheet" href="css/collections.css">
-    <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -38,18 +35,16 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
+                        <a href="../index.html">
+                            <img src="../images/logo.png" alt="AgriStack Logo" class="logo-image">
                         </a>
                     </div>
-
                     <div class="search-bar">
                         <input type="text" placeholder="Search tractors, sprayers, tools...">
                         <button><i class="fas fa-search"></i></button>
                     </div>
-
                     <div class="nav-icons">
-                        <a href="login.html" class="user-menu">
+                        <a href="../login.html" class="user-menu">
                             <i class="fas fa-user"></i>
                             <span>Account</span>
                         </a>
@@ -66,39 +61,62 @@
         <nav class="mega-menu-nav">
             <div class="container">
                 <div class="mega-menu-wrapper">
-                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="../index.html" class="mega-menu-link home-link"> Home</a>
+
+                    <!-- Categories Dropdown - fixed paths -->
                     <div class="mega-menu-item">
                         <button class="mega-menu-trigger">
-                            <i class="fas fa-th-large"></i> Categories
-                            <i class="fas fa-chevron-down"></i>
+                            Categories <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="mega-menu-content">
                             <div class="mega-menu-column">
                                 <h4>Equipment</h4>
                                 <ul>
-                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
-                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
-                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
-                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h4>Shop By Brand</h4>
-                                <ul>
-                                    <li><a href="john-deere.html">John Deere</a></li>
-                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
-                                    <li><a href="brands.html?brand=case">CASE</a></li>
-                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                    <li><a href="../category/tractors.html">Tractors</a></li>
+                                    <li><a href="../category/sprayers.html">Sprayers</a></li>
+                                    <li><a href="../category/irrigation.html">Irrigation Systems</a></li>
+                                    <li><a href="../category/tools.html">Tools & Parts</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <a href="brands.html" class="mega-menu-link">Brands</a>
-                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
-                    <a href="sale.html" class="mega-menu-link sale-link">
-                        <i class="fas fa-tag"></i> Sale
-                    </a>
+                    <!-- Brands Dropdown -->
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Brands <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content mega-menu-brands">
+                            <div class="mega-menu-column">
+                                <ul>
+                                    <li><a href="../brands/kubota.html"> Kubota</a></li>
+                                    <li><a href="../brands/case.html"> CASE IH</a></li>
+                                    <li><a href="../brands/mahindra.html"> Mahindra</a></li>
+                                    <li><a href="../brands/new-holland.html"> New Holland</a></li>
+                                    <li><a href="../brands/john-deere.html"> John Deere</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collections Dropdown (same folder) -->
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Collections <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Featured</h4>
+                                <ul>
+                                    <li><a href="new-arrivals.html"> New Arrivals</a></li>
+                                    <li><a href="sale.html"> Best Sellers</a></li>
+                                    <li><a href="premium-equipment.html"> Premium Equipment</a></li>
+                                    <li><a href="clearance-sale.html"> Clearance Sale</a></li>
+                                    <li><a href="cooperative-bulk-orders.html"> Cooperative Bulk Orders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -123,9 +141,10 @@
             </div>
 
             <div class="products-grid">
+                <!-- Product Cards (all with href="#" and image paths with ../) -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/Kubota-tractor.jpg" alt="Compact Utility Tractor">
+                        <img src="../images/Kubota-tractor.jpg" alt="Compact Utility Tractor">
                         <span class="badge sale">-14% OFF</span>
                     </div>
                     <div class="product-info">
@@ -135,13 +154,13 @@
                             <span class="price">$18,400</span>
                             <span class="original-price">$21,000</span>
                         </div>
-                        <a href="product-detail.html?img=images/Kubota-tractor.jpg&title=Kubota%20L3901%20Compact%20Tractor" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/hypro.png" alt="Pro Field Sprayer">
+                        <img src="../images/hypro.png" alt="Pro Field Sprayer">
                         <span class="badge sale">-25% OFF</span>
                     </div>
                     <div class="product-info">
@@ -151,13 +170,13 @@
                             <span class="price">$3,150</span>
                             <span class="original-price">$4,200</span>
                         </div>
-                        <a href="product-detail.html?img=images/hypro.png&title=Hypro%20Sprayer%205100C" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/rain-bird.jpg" alt="Smart Irrigation Hub">
+                        <img src="../images/rain-bird.jpg" alt="Smart Irrigation Hub">
                         <span class="badge sale">-30% OFF</span>
                     </div>
                     <div class="product-info">
@@ -167,13 +186,13 @@
                             <span class="price">$595</span>
                             <span class="original-price">$850</span>
                         </div>
-                        <a href="product-detail.html?img=images/rain-bird.jpg&title=Rain%20Bird%20Irrigation%20Controller" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/ag-leader-soilmap-probe.png" alt="AI Soil Analyzer">
+                        <img src="../images/ag-leader-soilmap-probe.png" alt="AI Soil Analyzer">
                         <span class="badge sale">-35% OFF</span>
                     </div>
                     <div class="product-info">
@@ -183,13 +202,13 @@
                             <span class="price">$844</span>
                             <span class="original-price">$1,299</span>
                         </div>
-                        <a href="product-detail.html?img=images/ag-leader-soilmap-probe.png&title=Ag%20Leader%20SoilMap%20Probe" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/Massey-Ferguson.png" alt="Heavy-Duty Tractor">
+                        <img src="../images/Massey-Ferguson.png" alt="Heavy-Duty Tractor">
                         <span class="badge sale">-20% OFF</span>
                     </div>
                     <div class="product-info">
@@ -199,13 +218,13 @@
                             <span class="price">$56,000</span>
                             <span class="original-price">$70,000</span>
                         </div>
-                        <a href="product-detail.html?img=images/Massey-Ferguson.png&title=Massey%20Ferguson%20MF%204708%20Tractor" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/swaraj-tractor.jpg" alt="Precision Seed Drill">
+                        <img src="../images/swaraj-tractor.jpg" alt="Precision Seed Drill">
                         <span class="badge sale">-40% OFF</span>
                     </div>
                     <div class="product-info">
@@ -215,13 +234,13 @@
                             <span class="price">$2,400</span>
                             <span class="original-price">$4,000</span>
                         </div>
-                        <a href="product-detail.html?img=images/swaraj-tractor.jpg&title=Swaraj%20735%20FE%20Tractor" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/topcon.jpg" alt="Crop Health Monitor">
+                        <img src="../images/topcon.jpg" alt="Crop Health Monitor">
                         <span class="badge sale">-28% OFF</span>
                     </div>
                     <div class="product-info">
@@ -231,13 +250,13 @@
                             <span class="price">$1,548</span>
                             <span class="original-price">$2,150</span>
                         </div>
-                        <a href="product-detail.html?img=images/topcon.jpg&title=Topcon%20AES%20Precision%20Guidance" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/vicon.jpg" alt="Automated Fertilizer Spreader">
+                        <img src="../images/vicon.jpg" alt="Automated Fertilizer Spreader">
                         <span class="badge sale">-22% OFF</span>
                     </div>
                     <div class="product-info">
@@ -247,13 +266,13 @@
                             <span class="price">$2,964</span>
                             <span class="original-price">$3,800</span>
                         </div>
-                        <a href="product-detail.html?img=images/vicon.jpg&title=Vicon%20Spreader%20VS300T" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/agrifac-tractor.png" alt="Electric Rotary Tiller">
+                        <img src="../images/agrifac-tractor.png" alt="Electric Rotary Tiller">
                         <span class="badge sale">-32% OFF</span>
                     </div>
                     <div class="product-info">
@@ -263,13 +282,13 @@
                             <span class="price">$1,802</span>
                             <span class="original-price">$2,650</span>
                         </div>
-                        <a href="product-detail.html?img=images/agrifac-tractor.png&title=Agrifac%20Condor%2012R%20Tiller" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/agricultural-drone.jpg" alt="Agricultural Drone Sprayer">
+                        <img src="../images/agricultural-drone.jpg" alt="Agricultural Drone Sprayer">
                         <span class="badge sale">-18% OFF</span>
                     </div>
                     <div class="product-info">
@@ -279,13 +298,13 @@
                             <span class="price">$12,710</span>
                             <span class="original-price">$15,500</span>
                         </div>
-                        <a href="product-detail.html?img=images/agricultural-drone.jpg&title=XAG%20V50%20Agricultural%20Drone" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="images/mini-harvester.png" alt="Mini Harvest Combine">
+                        <img src="../images/mini-harvester.png" alt="Mini Harvest Combine">
                         <span class="badge sale">-15% OFF</span>
                     </div>
                     <div class="product-info">
@@ -295,7 +314,7 @@
                             <span class="price">$24,565</span>
                             <span class="original-price">$28,900</span>
                         </div>
-                        <a href="product-detail.html?img=images/mini-harvester.png&title=Yto-Layland%20Mini%20Harvester" class="btn btn-primary btn-view-details">View Details</a>
+                        <a href="#" class="btn btn-primary btn-view-details">View Details</a>
                     </div>
                 </div>
             </div>
@@ -308,7 +327,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
+                        <img src="../images/logo.png" alt="AgriStack Logo" class="logo-image">
                     </div>
                     <p>The world's leading agriculture equipment marketplace. Connecting farmers to quality equipment globally.</p>
                     <div class="social-links">
@@ -318,96 +337,70 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">Tractors</a></li>
-                        <li><a href="#">Harvesting</a></li>
-                        <li><a href="#">Planting & Seeding</a></li>
-                        <li><a href="#">Tillage</a></li>
-                        <li><a href="#">Hay & Forage</a></li>
-                    </ul>
+                    <ul><li><a href="#">Tractors</a></li><li><a href="#">Harvesting</a></li><li><a href="#">Planting & Seeding</a></li><li><a href="#">Tillage</a></li><li><a href="#">Hay & Forage</a></li></ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Track Order</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">Financing Options</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                    <ul><li><a href="#">Help Center</a></li><li><a href="#">Track Order</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Financing Options</a></li><li><a href="#">Contact Us</a></li></ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>Payment Methods</h4>
                     <div class="payment-icons">
-                        <img src="images/visa.jpg" alt="Visa" class="payment-icon">
-                        <img src="images/mastercard.jpg" alt="Mastercard" class="payment-icon">
-                        <img src="images/paypal.jpg" alt="PayPal" class="payment-icon">
-                        <img src="images/americanexpress.jpg" alt="American Express" class="payment-icon">
+                        <img src="../images/logo/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="../images/logo/mastercard.jpg" alt="Mastercard" class="payment-icon">
+                        <img src="../images/logo/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="../images/logo/americanexpress.jpg" alt="American Express" class="payment-icon">
                     </div>
                     <h4 class="subscribe-title">Subscribe</h4>
-                    <div class="subscribe-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button>Join</button>
-                    </div>
+                    <div class="subscribe-form"><input type="email" placeholder="Enter your email"><button>Join</button></div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2024 AgriStack Marketplace. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Legal</a>
-                </div>
+                <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Legal</a></div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <script>
-        // Categories dropdown in page navigation
-        const pageNavBtn = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-link');
-        const pageNavMenu = document.querySelector('.page-nav .categories-dropdown-menu .dropdown-submenu');
+        // Fix View Details: remove "../" from image path and redirect to root product-detail.html
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.btn-view-details').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.product-card');
+                    const imgEl = card ? card.querySelector('.product-image img') : null;
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    let src = imgEl ? imgEl.getAttribute('src') : null;
+                    const title = titleEl ? titleEl.textContent.trim() : '';
 
-        if (pageNavBtn && pageNavMenu) {
-            // Toggle dropdown on button click
-            pageNavBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = pageNavMenu.classList.contains('active');
-                if (isOpen) {
-                    pageNavMenu.classList.remove('active');
-                    pageNavBtn.classList.remove('active');
-                } else {
-                    pageNavMenu.classList.add('active');
-                    pageNavBtn.classList.add('active');
-                }
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                const isClickInsideMenu = e.target.closest('.page-nav .categories-dropdown-menu');
-                if (!isClickInsideMenu && pageNavMenu.classList.contains('active')) {
-                    pageNavMenu.classList.remove('active');
-                    pageNavBtn.classList.remove('active');
-                }
-            });
-
-            // Close dropdown after clicking a link
-            const links = pageNavMenu.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Don't prevent default - let the link navigate
-                    pageNavMenu.classList.remove('active');
-                    pageNavBtn.classList.remove('active');
+                    if (src) {
+                        // Remove leading "../" because product-detail.html is in root
+                        src = src.replace(/^\.\.\//, '');
+                        const url = `../product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                        window.location.href = url;
+                    } else {
+                        window.location.href = this.href;
+                    }
                 });
             });
-        }
+
+            document.querySelectorAll('.product-image img').forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    const card = this.closest('.product-card');
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    let src = this.getAttribute('src');
+                    const title = titleEl ? titleEl.textContent.trim() : '';
+                    if (src) src = src.replace(/^\.\.\//, '');
+                    const url = `../product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                    window.location.href = url;
+                });
+            });
+        });
     </script>
 </body>
 </html>

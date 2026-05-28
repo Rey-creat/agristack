@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubota Equipment | AgriStack</title>
+    
+    <!-- Global Styles (relative from brands/ folder) -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-banner">
+            <div class="banner-content">
+                <span><i class="fas fa-shipping-fast"></i> Free Shipping on orders over $500</span>
+                <span><i class="fas fa-phone"></i> 24/7 Support: 1-800-AGRI-NET</span>
+                <span><i class="fas fa-map-marker-alt"></i> Find a Dealer</span>
+                <span>Track Order</span>
+                <span>Help Center</span>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.png" alt="AgriStack Logo" class="logo-image">
+                        </a>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search tractors, sprayers, tools...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="nav-icons">
+                        <a href="../login.html" class="user-menu">
+                            <i class="fas fa-user"></i>
+                            <span>Account</span>
+                        </a>
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mega Menu Navigation - FIXED PATHS -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="../index.html" class="mega-menu-link home-link"> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Categories <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <!-- Added ../ to go from brands/ up to root, then into category/ -->
+                                    <li><a href="../category/tractors.html">Tractors</a></li>
+                                    <li><a href="../category/sprayers.html">Sprayers</a></li>
+                                    <li><a href="../category/irrigation.html">Irrigation Systems</a></li>
+                                    <li><a href="../category/tools.html">Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Brands <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content mega-menu-brands">
+                            <div class="mega-menu-column">
+                                <ul>
+                                    <!-- These are correct because we are already in brands/ -->
+                                    <li><a href="kubota.html"> Kubota</a></li>
+                                    <li><a href="case.html"> CASE IH</a></li>
+                                    <li><a href="mahindra.html"> Mahindra</a></li>
+                                    <li><a href="new-holland.html"> New Holland</a></li>
+                                    <li><a href="john-deere.html"> John Deere</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Collections <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Featured</h4>
+                                <ul>
+                                    <li><a href="../collections/new-arrivals.html"> New Arrivals</a></li>
+                                    <li><a href="../collections/sale.html"> Best Sellers</a></li>
+                                    <li><a href="../collections/premium-equipment.html"> Premium Equipment</a></li>
+                                    <li><a href="../collections/clearance-sale.html"> Clearance Sale</a></li>
+                                    <li><a href="../collections/cooperative-bulk-orders.html"> Cooperative Bulk Orders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ========== FEATURED KUBOTA PRODUCTS – 4 CARDS PER ROW ========== -->
+    <section class="featured-equipment" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Kubota Models</h2>
+                <a href="#" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Products Grid (4 cards per row) -->
+            <div class="products-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors1.jpg" alt="Kubota M7 Series">
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota M7-172</h3>
+                        <div class="price-section">
+                            <span class="price">$165,400</span>
+                            <span class="original-price">$178,000</span>
+                        </div>
+                        <!-- View Details: we'll let JavaScript handle the click and remove "../" from image path -->
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors1.jpg" data-title="Kubota M7-172">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors2.jpg" alt="Kubota BX Series">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota BX2680</h3>
+                        <div class="price-section">
+                            <span class="price">$15,800</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors2.jpg" data-title="Kubota BX2680">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors3.jpg" alt="Kubota L Series">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota L3560</h3>
+                        <div class="price-section">
+                            <span class="price">$32,500</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors3.jpg" data-title="Kubota L3560">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors4.jpg" alt="Kubota RTV">
+                        <span class="badge">Limited Stock</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota RTV-X1100C</h3>
+                        <div class="price-section">
+                            <span class="price">$21,200</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors4.jpg" data-title="Kubota RTV-X1100C">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors5.jpg" alt="Kubota MX Series">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota MX6000</h3>
+                        <div class="price-section">
+                            <span class="price">$44,900</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors5.jpg" data-title="Kubota MX6000">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors6.jpg" alt="Kubota ZD Mower">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota ZD1211</h3>
+                        <div class="price-section">
+                            <span class="price">$13,400</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors6.jpg" data-title="Kubota ZD1211">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors7.jpg" alt="Kubota M5 Series">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota M5-111</h3>
+                        <div class="price-section">
+                            <span class="price">$98,700</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors7.jpg" data-title="Kubota M5-111">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/tractors/kubota-tractors8.jpg" alt="Kubota Loader">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kubota LA1055 Loader</h3>
+                        <div class="price-section">
+                            <span class="price">$6,850</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-view-details" data-img="../images/tractors/kubota-tractors8.jpg" data-title="Kubota LA1055 Loader">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/logo.png" alt="AgriStack Logo" class="logo-image">
+                    </div>
+                    <p>The world's leading agriculture equipment marketplace. Connecting farmers to quality equipment globally.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul><li><a href="#">Tractors</a></li><li><a href="#">Harvesting</a></li><li><a href="#">Planting & Seeding</a></li><li><a href="#">Tillage</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul><li><a href="#">Help Center</a></li><li><a href="#">Track Order</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Contact Us</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Payment Methods</h4>
+                    <div class="payment-icons">
+                        <img src="../images/logo/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="../images/logo/mastercard.jpg" alt="Mastercard" class="payment-icon">
+                        <img src="../images/logo/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="../images/logo/americanexpress.jpg" alt="American Express" class="payment-icon">
+                    </div>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button>Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriStack Marketplace. All rights reserved.</p>
+                <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Legal</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Fix View Details: remove "../" from image path and redirect to root product-detail.html
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.btn-view-details').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let img = this.getAttribute('data-img');
+                    const title = this.getAttribute('data-title') || this.closest('.product-card')?.querySelector('h3')?.innerText || '';
+                    if (img) {
+                        img = img.replace(/^\.\.\//, ''); // remove leading "../"
+                        const url = `../product-detail.html?img=${encodeURIComponent(img)}&title=${encodeURIComponent(title)}`;
+                        window.location.href = url;
+                    } else {
+                        // fallback: try to get from image inside card
+                        const card = this.closest('.product-card');
+                        const imgEl = card ? card.querySelector('.product-image img') : null;
+                        if (imgEl) {
+                            let src = imgEl.getAttribute('src');
+                            src = src.replace(/^\.\.\//, '');
+                            window.location.href = `../product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Ensure 4 cards per row (responsive grid) -->
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        @media (max-width: 1024px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .products-grid { grid-template-columns: 1fr; }
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            position: relative;
+        }
+        .product-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            z-index: 1;
+        }
+        .product-info {
+            padding: 12px;
+        }
+        .price-section {
+            margin: 8px 0;
+        }
+        .price {
+            font-weight: 700;
+            color: #2d6a4f;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 12px;
+            margin-left: 6px;
+        }
+    </style>
+</body>
+</html>

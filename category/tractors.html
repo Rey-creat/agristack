@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractors - AgriStack</title>
+    
+    <!-- Global Styles (relative from subfolder) -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/plp.css">
+    <link rel="stylesheet" href="../css/trust.css">
+    <link rel="stylesheet" href="../css/collections.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-banner">
+            <div class="banner-content">
+                <span><i class="fas fa-shipping-fast"></i> Free Shipping on orders over $500</span>
+                <span><i class="fas fa-phone"></i> 24/7 Support: 1-800-AGRI-NET</span>
+                <span><i class="fas fa-map-marker-alt"></i> Find a Dealer</span>
+                <span>Track Order</span>
+                <span>Help Center</span>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo/logo.png" alt="AgriStack Logo" class="logo-image">
+                        </a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search tractors, sprayers, tools...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="nav-icons">
+                        <a href="../login.html" class="user-menu">
+                            <i class="fas fa-user"></i>
+                            <span>Account</span>
+                        </a>
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mega Menu Navigation -->
+        <nav class="mega-menu-nav">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <a href="../index.html" class="mega-menu-link home-link"> Home</a>
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Categories <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Equipment</h4>
+                                <ul>
+                                    <li><a href="tractors.html">Tractors</a></li>
+                                    <li><a href="sprayers.html">Sprayers</a></li>
+                                    <li><a href="irrigation.html">Irrigation Systems</a></li>
+                                    <li><a href="tools.html">Tools & Parts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Brands <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content mega-menu-brands">
+                            <div class="mega-menu-column">
+                                <ul>
+                                    <li><a href="../brands/kubota.html"> Kubota</a></li>
+                                    <li><a href="../brands/case.html"> CASE IH</a></li>
+                                    <li><a href="../brands/mahindra.html"> Mahindra</a></li>
+                                    <li><a href="../brands/new-holland.html"> New Holland</a></li>
+                                    <li><a href="../brands/john-deere.html"> John Deere</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Collections <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Featured</h4>
+                                <ul>
+                                    <li><a href="../collections/new-arrivals.html"> New Arrivals</a></li>
+                                    <li><a href="../collections/sale.html"> Best Sellers</a></li>
+                                    <li><a href="../collections/premium-equipment.html"> Premium Equipment</a></li>
+                                    <li><a href="../collections/clearance-sale.html"> Clearance Sale</a></li>
+                                    <li><a href="../collections/cooperative-bulk-orders.html"> Cooperative Bulk Orders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tractors Category Section -->
+    <section class="category-page">
+        <div class="container">
+            <div class="category-header">
+                <h1><i class="fas fa-tractor"></i> Tractors</h1>
+                <p>Premium tractors from the world's leading manufacturers</p>
+            </div>
+
+            <!-- Sorting & Results Bar -->
+            <div class="plp-controls">
+                <div class="results-info">
+                    <span class="results-count">Showing <strong id="product-count">12</strong> products</span>
+                </div>
+                <div class="sort-wrapper">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popularity">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="plp-wrapper">
+                <!-- Filter Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="btn-clear-filters" id="clear-filters-btn">Clear All</button>
+                    </div>
+
+                    <!-- Brand Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">
+                            <i class="fas fa-chevron-down"></i> Brand
+                        </h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox" name="brand" value="john-deere"><span>John Deere</span><span class="count">(3)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="brand" value="kubota"><span>Kubota</span><span class="count">(2)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="brand" value="case"><span>CASE IH</span><span class="count">(1)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="brand" value="mahindra"><span>Mahindra</span><span class="count">(1)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="brand" value="new-holland"><span>New Holland</span><span class="count">(1)</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Type Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title"><i class="fas fa-chevron-down"></i> Type</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox" name="type" value="compact"><span>Compact Utility</span><span class="count">(2)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="type" value="row-crop"><span>Row Crop</span><span class="count">(1)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="type" value="heavy-duty"><span>Heavy-Duty</span><span class="count">(2)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="type" value="mid-size"><span>Mid-Size</span><span class="count">(1)</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Horsepower Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title"><i class="fas fa-chevron-down"></i> Horsepower</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox" name="horsepower" value="0-50"><span>0 - 50 HP</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="horsepower" value="50-100"><span>50 - 100 HP</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="horsepower" value="100-150"><span>100 - 150 HP</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="horsepower" value="150+"><span>150+ HP</span></label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title"><i class="fas fa-chevron-down"></i> Price Range</h4>
+                        <div class="price-range-wrapper">
+                            <input type="range" min="0" max="100000" value="0" class="price-slider" id="price-min">
+                            <input type="range" min="0" max="100000" value="100000" class="price-slider" id="price-max">
+                            <div class="price-display"><span>$<span id="min-price">0</span></span> - <span>$<span id="max-price">100,000</span></span></div>
+                        </div>
+                    </div>
+
+                    <!-- Availability Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title"><i class="fas fa-chevron-down"></i> Availability</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox" name="availability" value="in-stock"><span>In Stock</span><span class="count">(8)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="availability" value="low-stock"><span>Low Stock</span><span class="count">(2)</span></label>
+                            <label class="filter-checkbox"><input type="checkbox" name="availability" value="pre-order"><span>Pre-order</span><span class="count">(2)</span></label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-grid-main">
+                    <div class="products-grid" id="products-container">
+                        <!-- Product Cards -->
+                        <div class="product-card" data-id="2" data-brand="kubota" data-type="compact" data-price="52900" data-hp="75" data-availability="in-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/premium-kubota-tractor.jpg" alt="Premium Utility Tractor">
+                                <span class="stock-badge in-stock">In Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Premium Utility Tractor M5091</h3>
+                                <p class="product-brand">Kubota</p>
+                                <p class="product-specs">75 HP • Hydrostatic • Deluxe Cab</p>
+                                <div class="price-section"><span class="price">$52,900</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="3" data-brand="case" data-type="row-crop" data-price="67300" data-hp="125" data-availability="in-stock">
+                            <div class="product-image">
+                                <img src="../images/RCTractor.jpg" alt="Row Crop Tractor">
+                                <span class="stock-badge in-stock">In Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Row Crop Tractor Puma 125</h3>
+                                <p class="product-brand">CASE IH</p>
+                                <p class="product-specs">125 HP • Precision Guidance • 4WD</p>
+                                <div class="price-section"><span class="price">$67,300</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="4" data-brand="mahindra" data-type="heavy-duty" data-price="61200" data-hp="110" data-availability="low-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/flagship-tractor.jpg" alt="Flagship Tractor">
+                                <span class="stock-badge low-stock">Low Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Flagship Tractor Novo 740</h3>
+                                <p class="product-brand">Mahindra</p>
+                                <p class="product-specs">110 HP • Synchro Shuttle • Cab</p>
+                                <div class="price-section"><span class="price">$61,200</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="5" data-brand="new-holland" data-type="heavy-duty" data-price="75500" data-hp="180" data-availability="in-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/heavyduty-tractor.jpg" alt="Heavy-Duty Farm Tractor">
+                                <span class="stock-badge in-stock">In Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Heavy-Duty Farm Tractor T8</h3>
+                                <p class="product-brand">New Holland</p>
+                                <p class="product-specs">180 HP • Autocommand • PLM Ready</p>
+                                <div class="price-section"><span class="price">$75,500</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="6" data-brand="john-deere" data-type="mid-size" data-price="42800" data-hp="85" data-availability="in-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/midsize-tracor.jpg" alt="Mid-Size Agricultural Tractor">
+                                <span class="stock-badge in-stock">In Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Mid-Size Agricultural Tractor 5075E</h3>
+                                <p class="product-brand">John Deere</p>
+                                <p class="product-specs">85 HP • iMatch • Open Station</p>
+                                <div class="price-section"><span class="price">$42,800</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="7" data-brand="kubota" data-type="compact" data-price="28900" data-hp="38" data-availability="pre-order">
+                            <div class="product-image">
+                                <img src="../images/tractors/garden-tractor.jpg" alt="Compact Garden Tractor">
+                                <span class="stock-badge pre-order">Pre-order</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Compact Garden Tractor B2650</h3>
+                                <p class="product-brand">Kubota</p>
+                                <p class="product-specs">38 HP • Hydrostatic • Compact</p>
+                                <div class="price-section"><span class="price">$28,900</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="8" data-brand="case" data-type="heavy-duty" data-price="58600" data-hp="155" data-availability="in-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/power-tractor.jpg" alt="Precision Power Tractor">
+                                <span class="stock-badge in-stock">In Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Precision Power Tractor Puma 155</h3>
+                                <p class="product-brand">CASE IH</p>
+                                <p class="product-specs">155 HP • CVXDrive • 4WD</p>
+                                <div class="price-section"><span class="price">$58,600</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="9" data-brand="mahindra" data-type="mid-size" data-price="48900" data-hp="95" data-availability="low-stock">
+                            <div class="product-image">
+                                <img src="../images/tractors/professional-tractor.jpg" alt="Professional Series Tractor">
+                                <span class="stock-badge low-stock">Low Stock</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Professional Series Tractor JIVO</h3>
+                                <p class="product-brand">Mahindra</p>
+                                <p class="product-specs">95 HP • Power Steering • Open Cab</p>
+                                <div class="price-section"><span class="price">$48,900</span></div>
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-primary btn-view-details">View Details</a>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><img src="../images/logo/logo.png" alt="AgriStack Logo" class="logo-image"></div>
+                    <p>The world's leading agriculture equipment marketplace. Connecting farmers to quality equipment globally.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul><li><a href="#">Tractors</a></li><li><a href="#">Harvesting</a></li><li><a href="#">Planting & Seeding</a></li><li><a href="#">Tillage</a></li><li><a href="#">Hay & Forage</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul><li><a href="#">Help Center</a></li><li><a href="#">Track Order</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Financing Options</a></li><li><a href="#">Contact Us</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Payment Methods</h4>
+                    <div class="payment-icons">
+                        <img src="../images/logo/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="../images/logo/mastercard.jpg" alt="Mastercard" class="payment-icon">
+                        <img src="../images/logo/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="../images/logo/americanexpress.jpg" alt="American Express" class="payment-icon">
+                    </div>
+                    <h4 class="subscribe-title">Subscribe</h4>
+                    <div class="subscribe-form"><input type="email" placeholder="Enter your email"><button>Join</button></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgriStack Marketplace. All rights reserved.</p>
+                <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Legal</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/plp.js"></script>
+    <script>
+        // Fix View Details: remove "../" from image path before passing to product-detail.html
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.btn-view-details').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.product-card');
+                    const imgEl = card ? card.querySelector('.product-image img') : null;
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    let src = imgEl ? imgEl.getAttribute('src') : null;
+                    const title = titleEl ? titleEl.textContent.trim() : '';
+
+                    if (src) {
+                        // Remove leading "../" because product-detail.html is in root
+                        src = src.replace(/^\.\.\//, '');
+                        const url = `../product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                        window.location.href = url;
+                    } else {
+                        window.location.href = this.href;
+                    }
+                });
+            });
+
+            document.querySelectorAll('.product-image img').forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    const card = this.closest('.product-card');
+                    const titleEl = card ? card.querySelector('h3') : null;
+                    let src = this.getAttribute('src');
+                    const title = titleEl ? titleEl.textContent.trim() : '';
+                    if (src) src = src.replace(/^\.\.\//, '');
+                    const url = `../product-detail.html?img=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+                    window.location.href = url;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

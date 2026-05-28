@@ -125,9 +125,9 @@
 .image-label {
     position: absolute;
     left: 22px;
-    bottom: 22px;
+    bottom: 10px;
     width: 220px;
-    height: 100px;
+    height: 120px;
     background: rgba(255, 255, 255, 0.92);
     color: var(--text-dark);
     padding: 14px 16px;

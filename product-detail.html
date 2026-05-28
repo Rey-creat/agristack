@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product - AgriStack</title>
     
-    <!-- Global Styles -->
+    <!-- Global Styles (root paths) -->
     <link rel="stylesheet" href="css/global.css">
-    
-    <!-- Component Styles -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/pdp.css">
     <link rel="stylesheet" href="css/footer.css">
     
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -62,45 +59,66 @@
         <nav class="mega-menu-nav">
             <div class="container">
                 <div class="mega-menu-wrapper">
-                    <a href="index.html" class="mega-menu-link home-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="index.html" class="mega-menu-link">Home</a>
+                    
+                    <!-- Categories: point to category/ folder -->
                     <div class="mega-menu-item">
                         <button class="mega-menu-trigger">
-                            <i class="fas fa-th-large"></i> Categories
-                            <i class="fas fa-chevron-down"></i>
+                            Categories <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="mega-menu-content">
                             <div class="mega-menu-column">
                                 <h4>Equipment</h4>
                                 <ul>
-                                    <li><a href="tractors.html"><i class="fas fa-tractor"></i> Tractors</a></li>
-                                    <li><a href="sprayers.html"><i class="fas fa-spray-can"></i> Sprayers</a></li>
-                                    <li><a href="irrigation.html"><i class="fas fa-water"></i> Irrigation</a></li>
-                                    <li><a href="tools.html"><i class="fas fa-wrench"></i> Tools & Parts</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h4>Shop By Brand</h4>
-                                <ul>
-                                    <li><a href="john-deere.html">John Deere</a></li>
-                                    <li><a href="brands.html?brand=kubota">Kubota</a></li>
-                                    <li><a href="brands.html?brand=case">CASE</a></li>
-                                    <li><a href="brands.html?brand=mahindra">Mahindra</a></li>
+                                    <li><a href="category/tractors.html">Tractors</a></li>
+                                    <li><a href="category/sprayers.html">Sprayers</a></li>
+                                    <li><a href="category/irrigation.html">Irrigation Systems</a></li>
+                                    <li><a href="category/tools.html">Tools & Parts</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <a href="brands.html" class="mega-menu-link">Brands</a>
-                    <a href="new-arrivals.html" class="mega-menu-link">New Arrivals</a>
-                    <a href="sale.html" class="mega-menu-link sale-link">
-                        <i class="fas fa-tag"></i> Sale
-                    </a>
+                    <!-- Brands -->
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Brands <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content mega-menu-brands">
+                            <div class="mega-menu-column">
+                                <ul>
+                                    <li><a href="brands/kubota.html"> Kubota</a></li>
+                                    <li><a href="brands/case.html"> CASE IH</a></li>
+                                    <li><a href="brands/mahindra.html"> Mahindra</a></li>
+                                    <li><a href="brands/new-holland.html"> New Holland</a></li>
+                                    <li><a href="brands/john-deere.html"> John Deere</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collections -->
+                    <div class="mega-menu-item">
+                        <button class="mega-menu-trigger">
+                            Collections <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Featured</h4>
+                                <ul>
+                                    <li><a href="collections/new-arrivals.html"> New Arrivals</a></li>
+                                    <li><a href="collections/sale.html"> Best Sellers</a></li>
+                                    <li><a href="collections/premium-equipment.html"> Premium Equipment</a></li>
+                                    <li><a href="collections/clearance-sale.html"> Clearance Sale</a></li>
+                                    <li><a href="collections/cooperative-bulk-orders.html"> Cooperative Bulk Orders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-
-    <!-- Breadcrumb removed -->
 
     <!-- Product Detail Section -->
     <section class="product-detail">
@@ -131,7 +149,6 @@
 
                 <!-- Product Information -->
                 <div class="product-information">
-                    <!-- Product Header -->
                     <div class="product-header">
                         <h1>Compact Utility Tractor 3025E</h1>
                         <p class="product-brand">John Deere</p>
@@ -148,51 +165,24 @@
                         </div>
                     </div>
 
-                    <!-- Stock & Availability -->
                     <div class="stock-section">
                         <span class="stock-badge in-stock"><i class="fas fa-check"></i> In Stock</span>
                         <p class="stock-text">Only <strong>3 units</strong> left at this price</p>
                         <p class="delivery-info"><i class="fas fa-truck"></i> Free shipping • Est. delivery: 5-7 business days</p>
                     </div>
 
-                    <!-- Price & SKU -->
                     <div class="price-section-pdp">
                         <div class="price-display">
                             <span class="price-label">Price</span>
                             <span class="price">$18,400</span>
-                            <span class="original-price">$21,000</span>
-                            <span class="discount-badge">-12% OFF</span>
                         </div>
                         <p class="sku">SKU: <strong>JD-3025E-2024</strong></p>
+                    
                     </div>
 
-                    <!-- Key Specs Summary -->
-                    <div class="specs-summary">
-                        <div class="spec-item">
-                            <i class="fas fa-bolt"></i>
-                            <span class="spec-label">Horsepower</span>
-                            <span class="spec-value">45 HP</span>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-cog"></i>
-                            <span class="spec-label">Transmission</span>
-                            <span class="spec-value">Manual</span>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-ruler"></i>
-                            <span class="spec-label">Size</span>
-                            <span class="spec-value">Compact</span>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-cube"></i>
-                            <span class="spec-label">Weight</span>
-                            <span class="spec-value">2,800 lbs</span>
-                        </div>
-                    </div>
+                  
 
-                    <!-- Action Buttons Section -->
                     <div class="actions-section">
-                        <!-- Quantity Selector -->
                         <div class="quantity-selector">
                             <label for="quantity">Quantity:</label>
                             <div class="qty-input">
@@ -201,8 +191,6 @@
                                 <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
-
-                        <!-- Main CTA Buttons -->
                         <div class="action-buttons">
                             <button class="btn btn-primary btn-large btn-add-to-cart">
                                 <i class="fas fa-shopping-cart"></i> Add to Cart
@@ -211,8 +199,6 @@
                                 <i class="fas fa-heart"></i> Add to Wishlist
                             </button>
                         </div>
-
-                        <!-- Secondary Actions -->
                         <div class="secondary-actions">
                             <button class="btn-action btn-rfq">
                                 <i class="fas fa-file-alt"></i> Request Quote
@@ -223,94 +209,44 @@
                         </div>
                     </div>
 
-                    <!-- Trust Indicators -->
                     <div class="trust-indicators">
-                        <div class="trust-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>100% Verified Equipment</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-undo"></i>
-                            <span>30-Day Easy Returns</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>1-Year Warranty Included</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-headset"></i>
-                            <span>24/7 Support</span>
-                        </div>
+                        <div class="trust-item"><i class="fas fa-check-circle"></i><span>100% Verified Equipment</span></div>
+                        <div class="trust-item"><i class="fas fa-undo"></i><span>30-Day Easy Returns</span></div>
+                        <div class="trust-item"><i class="fas fa-shield-alt"></i><span>1-Year Warranty Included</span></div>
+                        <div class="trust-item"><i class="fas fa-headset"></i><span>24/7 Support</span></div>
                     </div>
-
-                    <!-- Share Section removed -->
                 </div>
             </div>
 
             <!-- Product Tabs -->
             <div class="product-tabs">
                 <div class="tabs-header">
-                    <button class="tab-btn active" data-tab="specs">
-                        <i class="fas fa-list"></i> Specifications
-                    </button>
-                    <button class="tab-btn" data-tab="accessories">
-                        <i class="fas fa-puzzle-piece"></i> Attachments & Accessories
-                    </button>
-                    <button class="tab-btn" data-tab="reviews">
-                        <i class="fas fa-comments"></i> Reviews
-                    </button>
-                    <button class="tab-btn" data-tab="shipping">
-                        <i class="fas fa-shipping-fast"></i> Shipping & Returns
-                    </button>
+                    <button class="tab-btn active" data-tab="specs"><i class="fas fa-list"></i> Specifications</button>
+                    <button class="tab-btn" data-tab="accessories"><i class="fas fa-puzzle-piece"></i> Attachments & Accessories</button>
+                    <button class="tab-btn" data-tab="reviews"><i class="fas fa-comments"></i> Reviews</button>
+                    <button class="tab-btn" data-tab="shipping"><i class="fas fa-shipping-fast"></i> Shipping & Returns</button>
                 </div>
 
-                <!-- Specifications Tab -->
                 <div class="tab-content active" id="specs">
                     <h3>Technical Specifications</h3>
                     <table class="specs-table">
-                        <tr>
-                            <td class="spec-name">Engine Type</td>
-                            <td class="spec-value">4-Cylinder Diesel</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Horsepower</td>
-                            <td class="spec-value">45 HP @ 2600 RPM</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Transmission</td>
-                            <td class="spec-value">12F x 12R Synchro Shuttle</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">PTO Horsepower</td>
-                            <td class="spec-value">39 HP</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Rear Lift Capacity</td>
-                            <td class="spec-value">2,600 lbs @ 24 inches</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Fuel Tank Capacity</td>
-                            <td class="spec-value">16.4 gallons</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Overall Length</td>
-                            <td class="spec-value">148.2 inches</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Weight</td>
-                            <td class="spec-value">2,800 lbs</td>
-                        </tr>
-                        <tr>
-                            <td class="spec-name">Warranty</td>
-                            <td class="spec-value">1 Year, Manufacturer Coverage</td>
-                        </tr>
+                        <!-- specs content (same as original) -->
+                        <tr><td class="spec-name">Engine Type</td><td class="spec-value">4-Cylinder Diesel</td></tr>
+                        <tr><td class="spec-name">Horsepower</td><td class="spec-value">45 HP @ 2600 RPM</td></tr>
+                        <tr><td class="spec-name">Transmission</td><td class="spec-value">12F x 12R Synchro Shuttle</td></tr>
+                        <tr><td class="spec-name">PTO Horsepower</td><td class="spec-value">39 HP</td></tr>
+                        <tr><td class="spec-name">Rear Lift Capacity</td><td class="spec-value">2,600 lbs @ 24 inches</td></tr>
+                        <tr><td class="spec-name">Fuel Tank Capacity</td><td class="spec-value">16.4 gallons</td></tr>
+                        <tr><td class="spec-name">Overall Length</td><td class="spec-value">148.2 inches</td></tr>
+                        <tr><td class="spec-name">Weight</td><td class="spec-value">2,800 lbs</td></tr>
+                        <tr><td class="spec-name">Warranty</td><td class="spec-value">1 Year, Manufacturer Coverage</td></tr>
                     </table>
                 </div>
 
-                <!-- Accessories Tab -->
                 <div class="tab-content" id="accessories">
                     <h3>Compatible Attachments & Accessories</h3>
                     <div class="accessories-grid">
+                        <!-- accessory cards (same as original) -->
                         <div class="accessory-card">
                             <img src="images/loader-bucket.jpg" alt="Front Loader">
                             <h4>Front Loader JD-200</h4>
@@ -342,75 +278,44 @@
                     </div>
                 </div>
 
-                <!-- Reviews Tab -->
                 <div class="tab-content" id="reviews">
                     <h3>Customer Reviews (238)</h3>
                     <div class="reviews-section">
                         <div class="review-item">
                             <div class="review-header">
-                                <div class="reviewer-info">
-                                    <h4>John Farmer</h4>
-                                    <p class="review-date">Verified Purchase • 2 months ago</p>
-                                </div>
-                                <div class="review-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                                <div class="reviewer-info"><h4>John Farmer</h4><p class="review-date">Verified Purchase • 2 months ago</p></div>
+                                <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             </div>
                             <p class="review-title">Excellent value for money</p>
-                            <p class="review-text">Great tractor for small to medium farms. Very reliable and easy to maintain. Delivery was on time and customer service was exceptional.</p>
-                            <div class="review-actions">
-                                <button class="btn-helpful">
-                                    <i class="fas fa-thumbs-up"></i> Helpful (12)
-                                </button>
-                            </div>
+                            <p class="review-text">Great tractor for small to medium farms. Very reliable and easy to maintain.</p>
+                            <div class="review-actions"><button class="btn-helpful"><i class="fas fa-thumbs-up"></i> Helpful (12)</button></div>
                         </div>
-
                         <div class="review-item">
                             <div class="review-header">
-                                <div class="reviewer-info">
-                                    <h4>Sarah Mitchell</h4>
-                                    <p class="review-date">Verified Purchase • 1 month ago</p>
-                                </div>
-                                <div class="review-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                                <div class="reviewer-info"><h4>Sarah Mitchell</h4><p class="review-date">Verified Purchase • 1 month ago</p></div>
+                                <div class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
                             </div>
                             <p class="review-title">Good quality, minor issue</p>
-                            <p class="review-text">Overall satisfied with the tractor. One minor cosmetic issue on delivery but customer service resolved it immediately. Would recommend.</p>
-                            <div class="review-actions">
-                                <button class="btn-helpful">
-                                    <i class="fas fa-thumbs-up"></i> Helpful (8)
-                                </button>
-                            </div>
+                            <p class="review-text">Overall satisfied. One minor cosmetic issue resolved immediately.</p>
+                            <div class="review-actions"><button class="btn-helpful"><i class="fas fa-thumbs-up"></i> Helpful (8)</button></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Shipping & Returns Tab -->
                 <div class="tab-content" id="shipping">
                     <h3>Shipping & Returns</h3>
                     <div class="shipping-info">
                         <h4>Shipping Information</h4>
                         <ul>
                             <li><strong>Shipping Method:</strong> Heavy freight • White glove delivery available</li>
-                            <li><strong>Estimated Delivery:</strong> 5-7 business days (may vary by location)</li>
+                            <li><strong>Estimated Delivery:</strong> 5-7 business days</li>
                             <li><strong>Shipping Cost:</strong> Free for orders over $500</li>
-                            <li><strong>Delivery Insurance:</strong> Available for additional fee</li>
                         </ul>
-
-                        <h4 style="margin-top: 20px;">Returns Policy</h4>
+                        <h4>Returns Policy</h4>
                         <ul>
                             <li><strong>Return Window:</strong> 30 days from delivery</li>
                             <li><strong>Condition:</strong> Must be in original, unused condition</li>
-                            <li><strong>Return Shipping:</strong> Free for defective items, fee applies otherwise</li>
+                            <li><strong>Return Shipping:</strong> Free for defective items</li>
                             <li><strong>Warranty:</strong> 1-year manufacturer warranty included</li>
                         </ul>
                     </div>
@@ -422,67 +327,42 @@
                 <h2>Related Products You Might Like</h2>
                 <div class="products-grid">
                     <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/PUTractor.jpg" alt="Premium Utility Tractor">
-                            <span class="stock-badge in-stock">In Stock</span>
-                        </div>
+                        <div class="product-image"><img src="images/PUTractor.jpg" alt="Premium Utility Tractor"><span class="stock-badge in-stock">In Stock</span></div>
                         <div class="product-info">
                             <h3>Premium Utility Tractor M5091</h3>
                             <p class="product-brand">Kubota</p>
                             <p class="product-specs">75 HP • Hydrostatic</p>
-                            <div class="price-section">
-                                <span class="price">$52,900</span>
-                            </div>
+                            <div class="price-section"><span class="price">$52,900</span></div>
                             <a href="product-detail.html?id=2" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
-
                     <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/RCTractor.jpg" alt="Row Crop Tractor">
-                            <span class="stock-badge in-stock">In Stock</span>
-                        </div>
+                        <div class="product-image"><img src="images/RCTractor.jpg" alt="Row Crop Tractor"><span class="stock-badge in-stock">In Stock</span></div>
                         <div class="product-info">
                             <h3>Row Crop Tractor Puma 125</h3>
                             <p class="product-brand">CASE IH</p>
                             <p class="product-specs">125 HP • CVXDrive</p>
-                            <div class="price-section">
-                                <span class="price">$67,300</span>
-                            </div>
+                            <div class="price-section"><span class="price">$67,300</span></div>
                             <a href="product-detail.html?id=3" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
-
                     <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/MSTractor.jpg" alt="Mid-Size Agricultural Tractor">
-                            <span class="stock-badge in-stock">In Stock</span>
-                        </div>
+                        <div class="product-image"><img src="images/MSTractor.jpg" alt="Mid-Size Agricultural Tractor"><span class="stock-badge in-stock">In Stock</span></div>
                         <div class="product-info">
                             <h3>Mid-Size Agricultural Tractor 5075E</h3>
                             <p class="product-brand">John Deere</p>
                             <p class="product-specs">85 HP • iMatch</p>
-                            <div class="price-section">
-                                <span class="price">$42,800</span>
-                            </div>
+                            <div class="price-section"><span class="price">$42,800</span></div>
                             <a href="product-detail.html?id=6" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
-
                     <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/CompactCase.jpg" alt="Compact Utility Power">
-                            <span class="stock-badge in-stock">In Stock</span>
-                            <span class="badge sale">Sale</span>
-                        </div>
+                        <div class="product-image"><img src="images/CompactCase.jpg" alt="Compact Utility Power"><span class="stock-badge in-stock">In Stock</span><span class="badge sale">Sale</span></div>
                         <div class="product-info">
                             <h3>Compact Utility Power JX55</h3>
                             <p class="product-brand">CASE IH</p>
                             <p class="product-specs">65 HP • Shuttle Shift</p>
-                            <div class="price-section">
-                                <span class="price">$35,600</span>
-                                <span class="original-price">$39,200</span>
-                            </div>
+                            <div class="price-section"><span class="price">$35,600</span><span class="original-price">$39,200</span></div>
                             <a href="product-detail.html?id=12" class="btn btn-primary btn-view-details">View Details</a>
                         </div>
                     </div>
@@ -491,17 +371,12 @@
         </div>
     </section>
 
-    <!-- Toast Container -->
-    <div class="toast-container"></div>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="AgriStack Logo" class="logo-image">
-                    </div>
+                    <div class="footer-logo"><img src="images/logo/logo.png" alt="AgriStack Logo" class="logo-image"></div>
                     <p>The world's leading agriculture equipment marketplace. Connecting farmers to quality equipment globally.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -510,7 +385,6 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h4>Shop</h4>
                     <ul>
@@ -521,7 +395,6 @@
                         <li><a href="#">New Arrivals</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
@@ -532,14 +405,13 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>Payment Methods</h4>
                     <div class="payment-icons">
-                        <img src="images/visa.jpg" alt="Visa" class="payment-icon">
-                        <img src="images/mastercard.jpg" alt="Mastercard" class="payment-icon">
-                        <img src="images/paypal.jpg" alt="PayPal" class="payment-icon">
-                        <img src="images/americanexpress.jpg" alt="American Express" class="payment-icon">
+                        <img src="images/logo/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="images/logo/mastercard.jpg" alt="Mastercard" class="payment-icon">
+                        <img src="images/logo/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="images/logo/americanexpress.jpg" alt="American Express" class="payment-icon">
                     </div>
                     <h4 class="subscribe-title">Subscribe</h4>
                     <div class="subscribe-form">
@@ -548,7 +420,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2024 AgriStack Marketplace. All rights reserved.</p>
                 <div class="footer-links">
